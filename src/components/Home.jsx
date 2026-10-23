@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { Buyer, ModuloEsempio, Ruolo } from './Disegni.jsx';
 import { privacyOf } from '../routes.js';
+import GraficoArr from './Grafico.jsx';
 
 const SPARKS = [
   [74, 0, -40], [78, 0.8, -18], [82, 1.6, -62], [76, 2.3, 12], [80, 3.1, -30],
@@ -172,6 +173,13 @@ function Modello({ t }) {
               </li>
             ))}
           </ol>
+        </div>
+
+        <div className="arr">
+          <p className="kicker">{t.arr.eyebrow}</p>
+          <h3 className="h3" style={{ maxWidth: '22ch' }}>{t.arr.h3}</h3>
+          <p className="lead">{t.arr.sub}</p>
+          <GraficoArr t={t.arr} />
         </div>
 
         <div className="compare">
