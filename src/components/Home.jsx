@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react';
 import { Buyer, ModuloEsempio, Ruolo } from './Disegni.jsx';
 import { privacyOf } from '../routes.js';
 
@@ -6,10 +7,38 @@ const SPARKS = [
   [86, 3.8, -8], [72, 1.1, -52], [88, 2.7, -24], [79, 4.3, 16], [84, 0.4, -36],
 ];
 
+// Scintille del colpo: partono dal punto in cui il martello tocca l'incudine
+const BURST = [
+  [-150, -120], [-110, -170], [-60, -200], [-20, -150], [30, -210], [80, -170], [130, -130], [170, -80],
+  [-190, -60], [200, -30], [-90, -90], [110, -220], [-140, -200], [60, -110], [-30, -240], [150, -190],
+];
+
+// Punto di contatto martello-incudine nella foto (1000 × 667 px)
+const FOTO = { w: 1000, h: 667, x: 500, y: 383, posX: 0.72, posY: 0.5 };
+
 function Hero({ t }) {
   const h = t.hero;
+  const ref = useRef(null);
+
+  // Posiziona il colpo sul punto giusto della foto, qualunque sia la misura dello schermo
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return undefined;
+    const place = () => {
+      const { width: w, height: hh } = el.getBoundingClientRect();
+      const s = Math.max(w / FOTO.w, hh / FOTO.h);
+      const x = (w - FOTO.w * s) * FOTO.posX + FOTO.x * s;
+      const y = (hh - FOTO.h * s) * FOTO.posY + FOTO.y * s;
+      el.style.setProperty('--ix', `${x}px`);
+      el.style.setProperty('--iy', `${y}px`);
+    };
+    place();
+    window.addEventListener('resize', place);
+    return () => window.removeEventListener('resize', place);
+  }, []);
+
   return (
-    <section className="hero" aria-labelledby="hero-title">
+    <section className="hero" aria-labelledby="hero-title" ref={ref}>
       <picture className="hero-photo">
         <source srcSet="/assets/forgia.webp" type="image/webp" />
         <img src="/assets/forgia.jpg" alt="" width="1000" height="667" fetchPriority="high" />
@@ -17,6 +46,13 @@ function Hero({ t }) {
       <div className="sparks" aria-hidden="true">
         {SPARKS.map(([l, d, dx], i) => (
           <i key={i} style={{ left: `${l}%`, animationDelay: `${d}s`, '--dx': `${dx}px` }} />
+        ))}
+      </div>
+      <div className="impact" aria-hidden="true">
+        <span className="flash" />
+        <span className="hot" />
+        {BURST.map(([bx, by], i) => (
+          <i key={i} style={{ '--bx': `${bx}px`, '--by': `${by}px`, animationDelay: `${0.55 + (i % 4) * 0.02}s` }} />
         ))}
       </div>
       <div className="wrap hero-in">
