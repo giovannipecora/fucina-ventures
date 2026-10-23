@@ -119,6 +119,7 @@ function BuyerSec({ t }) {
             ))}
           </ol>
           <p className="close">{b.close}</p>
+          <p className="bingo">{b.bingo[0]} <strong>{b.bingo[1]}</strong></p>
         </div>
       </div>
     </section>

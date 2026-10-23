@@ -52,6 +52,7 @@ export default {
     sub: 'Validiamo che esista davvero il tuo buyer: una persona che',
     items: ['ha il problema che hai identificato;', 'sta già cercando una soluzione;', 'è disposta a provarla da sola, e a pagarla se le piace.'],
     close: 'Se esiste, l\'azienda si costruisce intorno a lei.',
+    bingo: ['E se il buyer sei anche tu?', 'Hai fatto bingo.'],
     img: 'Il buyer: una persona con il problema, che cerca una soluzione e la paga se le piace',
   },
   band: {

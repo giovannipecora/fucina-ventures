@@ -493,3 +493,6 @@ h1, h2, h3 { margin: 0; font-weight: 800; font-stretch: var(--wide); letter-spac
 .soglia { position: relative; display: inline-block; width: 0.95em; height: 0.95em; margin: 0 0.14em; vertical-align: -0.12em; border: 0.08em solid currentColor; }
 .soglia::after { content: ""; position: absolute; left: 20%; right: 20%; top: 24%; bottom: 22%; background: var(--accent); clip-path: polygon(50% 0, 100% 100%, 0 100%); }
 .path-step.final .soglia::after { background: currentColor; }
+
+.buyer .bingo { margin-top: 14px; display: inline-flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; padding: 12px 18px; border-left: 3px solid var(--accent); background: var(--bg-2); font-size: 19px; font-weight: 600; }
+.buyer .bingo strong { color: var(--accent); font-weight: 800; font-stretch: var(--wide); }

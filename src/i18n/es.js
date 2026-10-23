@@ -52,6 +52,7 @@ export default {
     sub: 'Validamos que tu comprador existe de verdad: alguien que',
     items: ['tiene el problema que has identificado;', 'ya está buscando una solución;', 'está dispuesto a probarla por su cuenta, y a pagarla si le gusta.'],
     close: 'Si existe, la empresa se construye a su alrededor.',
+    bingo: ['¿Y si el comprador también eres tú?', '¡Bingo!'],
     img: 'El comprador: una persona con el problema, que busca una solución y la paga si le gusta',
   },
   band: {
