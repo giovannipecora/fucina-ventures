@@ -93,7 +93,7 @@ export default {
       rows: [
         ['Qué te da', 'Capital', 'Horas de trabajo', 'El producto, terminado y lanzado'],
         ['Qué pide', 'Equity', 'Facturas', 'Equity y 1.000 € (nosotros ponemos lo mismo)'],
-        ['Quién construye', 'Tú, contratando un equipo', 'Ellos, mientras pagues', 'Nosotros, como socios'],
+        ['Quién construye', 'Tú, contratando un equipo', 'Ellos, mientras pagues', 'Nosotros, como socios. Tú sigues con tu actividad'],
         ['Para cobrar', 'Abres tú sociedad, cuenta, facturas', 'Abres tú sociedad, cuenta, facturas', 'Todo listo desde el primer día'],
         ['Cuándo gana', 'Cuando se vende la sociedad', 'Desde ya, pase lo que pase', 'Solo si la empresa gana'],
       ],

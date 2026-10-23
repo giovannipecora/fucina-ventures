@@ -93,7 +93,7 @@ export default {
       rows: [
         ['What you get', 'Capital', 'Hours of work', 'The product, built and launched'],
         ['What it costs', 'Equity', 'Invoices', 'Equity and €1,000 (we put in the same)'],
-        ['Who builds', 'You, by hiring a team', 'They do, while you pay', 'We do, as partners'],
+        ['Who builds', 'You, by hiring a team', 'They do, while you pay', 'We do, as partners. You keep running your own work'],
         ['To get paid', 'You set up company, account, invoicing', 'You set up company, account, invoicing', 'Everything ready from day one'],
         ['When it earns', 'When the company is sold', 'Right away, whatever happens', 'Only if the company wins'],
       ],
