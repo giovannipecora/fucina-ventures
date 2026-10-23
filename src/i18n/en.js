@@ -4,7 +4,7 @@ export default {
   meta: {
     home: {
       title: 'Fucina.Ventures · AI-native venture builder: a company instead of money',
-      description: 'We don\'t give you money: we build your company. A secure, scalable product, legal entity and contracts, a sales engine. €1,000 for up to 3 years of incubation, in exchange for equity.',
+      description: 'We don\'t give you money: we build your company. A secure, scalable product, legal entity and contracts, a sales engine. €1,000 from you and €1,000 from us for up to 3 years of incubation, in exchange for equity.',
     },
     privacy: { title: 'Privacy policy · Fucina.Ventures', description: 'How Fucina.Ventures handles the data sent through the «Enter Fucina» form.' },
     thanks: { title: 'Thank you · Fucina.Ventures', description: 'We have received your idea.' },
@@ -26,7 +26,7 @@ export default {
     cta2: 'See the portfolio',
   },
   strip: [
-    ['€1,000', 'for up to 3 years of incubation'],
+    ['1K + 1K', '€1,000 from you, €1,000 from us: up to 3 years of incubation'],
     ['100%', 'execution instead of capital'],
     ['AI-native', 'small team, big product'],
     ['Equity', 'our only currency'],
@@ -92,7 +92,7 @@ export default {
       cols: ['Venture capital', 'Development agency', 'Fucina'],
       rows: [
         ['What you get', 'Capital', 'Hours of work', 'The product, built and launched'],
-        ['What it costs', 'Equity', 'Invoices', 'Equity and €1,000, up to 3 years'],
+        ['What it costs', 'Equity', 'Invoices', 'Equity and €1,000 (we put in the same)'],
         ['Who builds', 'You, by hiring a team', 'They do, while you pay', 'We do, as partners'],
         ['To get paid', 'You set up company, account, invoicing', 'You set up company, account, invoicing', 'Everything ready from day one'],
         ['When it earns', 'When the company is sold', 'Right away, whatever happens', 'Only if the company wins'],
@@ -131,7 +131,7 @@ export default {
     h2: 'What people ask us.',
     items: [
       ['How much equity do you ask for?', 'It depends on how much there is to build. We propose it after the call, in writing. [To be defined: the general rule]'],
-      ['How much do I pay?', 'Just €1,000, for up to 3 years of incubation. Development, bank account, invoicing and accounts are our investment while the company is inside Fucina. [To be confirmed: spin-off costs]'],
+      ['How much do I pay?', 'You put in €1,000 and we put in another €1,000, for up to 3 years of incubation. Development, bank account, invoicing and accounts are our investment while the company is inside Fucina. [To be confirmed: spin-off costs]'],
       ['When does it become my company?', 'When annual subscription revenue (ARR) reaches [X]. The threshold and the equity split are in the agreement from day one.'],
       ['Is my idea safe?', 'We sign a confidentiality agreement before getting into the details. [To be confirmed]'],
       ['What if it doesn\'t click?', 'It doesn\'t mean your idea is bad. It just means it doesn\'t fit the templates we know how to build well today. We\'ll always tell you, clearly.'],

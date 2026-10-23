@@ -4,7 +4,7 @@ export default {
   meta: {
     home: {
       title: 'Fucina.Ventures · Venture builder AI-native: un\'azienda al posto dei soldi',
-      description: 'Non ti diamo soldi: costruiamo la tua azienda. Prodotto sicuro e scalabile, società e contratti, motore di vendita. 1.000 € per massimo 3 anni di incubazione, in cambio di equity.',
+      description: 'Non ti diamo soldi: costruiamo la tua azienda. Prodotto sicuro e scalabile, società e contratti, motore di vendita. Tu metti 1.000 €, noi altri 1.000 €, per massimo 3 anni di incubazione, in cambio di equity.',
     },
     privacy: { title: 'Informativa privacy · Fucina.Ventures', description: 'Come Fucina.Ventures tratta i dati inviati con il modulo «Entra in Fucina».' },
     thanks: { title: 'Grazie · Fucina.Ventures', description: 'Abbiamo ricevuto la tua idea.' },
@@ -26,7 +26,7 @@ export default {
     cta2: 'Guarda il portfolio',
   },
   strip: [
-    ['1.000 €', 'per massimo 3 anni di incubazione'],
+    ['1K + 1K', '1.000 € tu, 1.000 € noi: fino a 3 anni di incubazione'],
     ['100%', 'lavoro eseguito al posto del capitale'],
     ['AI-native', 'team piccolo, prodotto grande'],
     ['Equity', 'l\'unica moneta'],
@@ -92,7 +92,7 @@ export default {
       cols: ['Venture capital', 'Agenzia di sviluppo', 'Fucina'],
       rows: [
         ['Cosa ti dà', 'Capitale', 'Ore di lavoro', 'Il prodotto, finito e lanciato'],
-        ['Cosa chiede', 'Equity', 'Fatture', 'Equity e 1.000 €, fino a 3 anni'],
+        ['Cosa chiede', 'Equity', 'Fatture', 'Equity e 1.000 € (noi ne mettiamo altrettanti)'],
         ['Chi costruisce', 'Tu, assumendo un team', 'Loro, finché paghi', 'Noi, da soci'],
         ['Per incassare', 'Apri tu società, conto, fatture', 'Apri tu società, conto, fatture', 'Tutto pronto dal primo giorno'],
         ['Quando guadagna', 'Alla vendita della società', 'Subito, comunque vada', 'Solo se l\'azienda vince'],
@@ -131,7 +131,7 @@ export default {
     h2: 'Le cose che ci chiedono.',
     items: [
       ['Quanta equity chiedete?', 'Dipende da quanto c\'è da costruire. Te la proponiamo dopo la call, per iscritto. [Da definire: la regola generale]'],
-      ['Quanto pago?', 'Solo 1.000 €, per un\'incubazione di massimo 3 anni. Sviluppo, conto, fatturazione e bilancio sono il nostro investimento finché l\'azienda è dentro Fucina. [Da confermare: costi dello spin-off]'],
+      ['Quanto pago?', 'Tu metti 1.000 € e noi ne mettiamo altri 1.000, per un\'incubazione di massimo 3 anni. Sviluppo, conto, fatturazione e bilancio sono il nostro investimento finché l\'azienda è dentro Fucina. [Da confermare: costi dello spin-off]'],
       ['Quando diventa una società mia?', 'Quando i ricavi annui degli abbonamenti (ARR) arrivano a [X]. Soglia e quote sono scritte nell\'accordo dal primo giorno.'],
       ['La mia idea è al sicuro?', 'Firmiamo un accordo di riservatezza prima di entrare nei dettagli. [Da confermare]'],
       ['E se non ci piacciamo?', 'Non vuol dire che la tua idea sia cattiva. Vuol dire solo che non entra nei modelli con cui oggi sappiamo costruire bene. Te lo diciamo sempre, con chiarezza.'],
