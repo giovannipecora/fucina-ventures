@@ -18,7 +18,7 @@ export default {
     langLabel: 'Language',
   },
   hero: {
-    eyebrow: 'AI-native venture builder · for managers, MBA students and graduates, and anyone who has spotted a problem and someone willing to pay for a solution',
+    eyebrow: 'For managers, MBA students and graduates, and anyone who has spotted a problem and someone willing to pay for a solution',
     h1a: 'We don\'t give you money.',
     h1b: 'We give you a company: secure, scalable, protected, and able to sell, to prove your buyer exists.',
     sub: 'With AI, growing a company no longer takes millions: it takes people who know how to build. You bring the idea, we build it and give you everything you need to get paid from day one. In return, we become partners.',
