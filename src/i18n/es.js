@@ -27,7 +27,7 @@ export default {
   },
   strip: [
     ['1.000 €', 'por hasta 3 años de incubación'],
-    ['0 €', 'en efectivo'],
+    ['100%', 'trabajo ejecutado en lugar de capital'],
     ['AI-native', 'equipo pequeño, producto grande'],
     ['Equity', 'nuestra única moneda'],
   ],

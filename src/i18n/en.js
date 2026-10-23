@@ -27,7 +27,7 @@ export default {
   },
   strip: [
     ['€1,000', 'for up to 3 years of incubation'],
-    ['€0', 'handed over in cash'],
+    ['100%', 'execution instead of capital'],
     ['AI-native', 'small team, big product'],
     ['Equity', 'our only currency'],
   ],
