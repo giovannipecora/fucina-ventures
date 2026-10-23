@@ -24,18 +24,22 @@ npm run deploy     # pubblica su Cloudflare (serve aver fatto "npx wrangler logi
 | Disegni (logo, ruoli, buyer, modulo di esempio) | `src/components/Disegni.jsx` |
 | Grafica | `src/styles.css` |
 | Pagine e SEO (titoli, hreflang, dati per Google) | `src/routes.js`, `src/entry-server.jsx` |
-| Modulo ed email | `worker/index.js`, `wrangler.toml` |
+| Modulo ed email | `worker/index.js`, `wrangler.worker.toml` |
 | Foto, favicon, robots, intestazioni di sicurezza | `public/` |
 
 Per cambiare un testo basta modificare il file della lingua: la stessa chiave va cambiata in tutte e tre.
 
+## Anteprima su Cloudflare Pages (solo il sito, senza modulo)
+
+Framework preset: None · Build command: `npm run build` · Build output directory: `dist/client`.
+
 ## Mettere online (Cloudflare, una volta sola)
 
 1. **Dominio** su Cloudflare (es. `fucina.ventures`).
-2. **Email Routing** (Dominio › Email › Email Routing): attivalo, crea `ciao@fucina.ventures` che inoltra alla vostra casella e **verifica** l'indirizzo di destinazione. Le email del modulo arrivano a `DESTINATARIO` in `wrangler.toml`.
+2. **Email Routing** (Dominio › Email › Email Routing): attivalo, crea `ciao@fucina.ventures` che inoltra alla vostra casella e **verifica** l'indirizzo di destinazione. Le email del modulo arrivano a `DESTINATARIO` in `wrangler.worker.toml`.
 3. **R2**: crea il bucket privato `fucina-proposte` (qui finiscono i PDF; si scaricano dal pannello R2).
 4. **Workers & Pages › Create › Import a repository**: scegli `giovannipecora/fucina-ventures`.
-   Build command: `npm run build` · Deploy command: `npx wrangler deploy`.
+   Build command: `npm run build` · Deploy command: `npx wrangler deploy -c wrangler.worker.toml`.
    Ogni push su `main` ripubblica il sito da solo.
 5. **Dominio personalizzato**: nel Worker › Settings › Domains & Routes aggiungi `fucina.ventures` (e `www`).
 6. **Statistiche del traffico**: Analytics & Logs › **Web Analytics** › aggiungi il sito e attiva l'inserimento automatico. Non usa cookie: non serve il banner.
@@ -46,7 +50,7 @@ Per cambiare un testo basta modificare il file della lingua: la stessa chiave va
 - [ ] Partita IVA vera al posto di `IT01234567890` (nei tre file delle lingue, `footer.company`).
 - [ ] Riempire i punti tra parentesi quadre: soglia `[X]` di ARR, quota di equity, prezzo di uscita, costi dello spin-off, accordo di riservatezza.
 - [ ] Informativa privacy: è una **bozza** (`privacyPage` nei file delle lingue), da far validare a un legale; mettere l'email per la privacy.
-- [ ] Controllare `MITTENTE` e `DESTINATARIO` in `wrangler.toml`.
+- [ ] Controllare `MITTENTE` e `DESTINATARIO` in `wrangler.worker.toml`.
 - [ ] (Consigliato) Cloudflare **Turnstile** sul modulo contro lo spam, se arrivano invii automatici.
 
 ## Privacy, in breve
