@@ -79,9 +79,9 @@ export default {
     growth: {
       eyebrow: 'Il percorso di crescita',
       h3: 'Ingegnerizziamo la crescita, un passo alla volta.',
-      sub: 'Il primo passo è la nostra promessa: un abbonamento online che le persone provano e pagano da sole. Quando i ricavi annui degli abbonamenti (ARR) sono sostenibili, l\'azienda passa a un veicolo indipendente. Poi costruiamo il percorso fino ai grandi clienti.',
+      sub: 'Il primo passo è la nostra promessa: una piattaforma online che il tuo buyer trova quando cerca, prova gratis e paga da solo. Quando i ricavi annui degli abbonamenti (ARR) sono sostenibili, l\'azienda passa a un veicolo indipendente. Poi costruiamo il percorso fino ai grandi clienti.',
       stages: [
-        { n: '01', name: 'Product-Led Growth', tag: 'Dentro Fucina', promise: 'La nostra promessa', text: 'Costruiamo il prodotto e lo vendiamo online come abbonamento, che le persone provano e pagano da sole. L\'idea si valida con i numeri veri.' },
+        { n: '01', name: 'Product-Led Growth', tag: 'Dentro Fucina', promise: 'La nostra promessa', text: 'Una piattaforma online che il tuo buyer:', steps: ['trova quando cerca una soluzione', 'prova gratis', 'paga da solo, in abbonamento'], after: 'L\'idea si valida con i numeri veri.' },
         { n: 'Traguardo', name: 'Spin-off', tag: 'Ricavi annui (ARR) · [X]', text: 'Veicolo indipendente: clienti, codice e marchio passano alla nuova società.', accent: true },
         { n: '02', later: true, name: 'Sales-Led Growth', tag: 'Società indipendente', text: 'Un motore di vendita per clienti più grandi e contratti più ricchi.' },
         { n: '03', later: true, name: 'Enterprise & Partner-Led', tag: 'Scala', text: 'Grandi aziende e partner che portano il prodotto sui loro mercati.' },

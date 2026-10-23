@@ -163,6 +163,12 @@ function Modello({ t }) {
                 <h4>{s.name}</h4>
                 <div className="stage-tag">{s.tag}</div>
                 <p>{s.text}</p>
+                {s.steps && (
+                  <ol className="promise-steps">
+                    {s.steps.map((x) => <li key={x}>{x}</li>)}
+                  </ol>
+                )}
+                {s.after && <p className="promise-after">{s.after}</p>}
               </li>
             ))}
           </ol>
