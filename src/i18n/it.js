@@ -26,7 +26,7 @@ export default {
     cta2: 'Guarda il portfolio',
   },
   strip: [
-    ['1K + 1K', '1.000 € tu, 1.000 € noi: fino a 3 anni di incubazione'],
+    ['Idea + 1K', 'tu metti l\'idea e 1.000 €, noi altri 1.000 €: fino a 3 anni di incubazione'],
     ['100%', 'lavoro eseguito al posto del capitale'],
     ['AI-native', 'team piccolo, prodotto grande'],
     ['Equity', 'l\'unica moneta'],
