@@ -490,5 +490,6 @@ h1, h2, h3 { margin: 0; font-weight: 800; font-stretch: var(--wide); letter-spac
 @media (max-width: 560px) { .fork-paths { grid-template-columns: minmax(0, 1fr); gap: 28px; } }
 
 /* Soglia ARR ancora da decidere: il triangolo del logo al posto di [X] */
-.soglia { display: inline-block; width: 0.62em; height: 0.56em; margin: 0 0.12em; vertical-align: 0.02em; background: var(--accent); clip-path: polygon(50% 0, 100% 100%, 0 100%); }
-.path-step.final .soglia { background: currentColor; }
+.soglia { position: relative; display: inline-block; width: 0.95em; height: 0.95em; margin: 0 0.14em; vertical-align: -0.12em; border: 0.08em solid currentColor; }
+.soglia::after { content: ""; position: absolute; left: 20%; right: 20%; top: 24%; bottom: 22%; background: var(--accent); clip-path: polygon(50% 0, 100% 100%, 0 100%); }
+.path-step.final .soglia::after { background: currentColor; }

@@ -71,7 +71,11 @@ function Svg({ W, H, pad, t, fs, id, speed, month }) {
       <line x1={x0} y1={yc} x2={x1} y2={yc} stroke="var(--ink-2)" strokeWidth="1.5" strokeDasharray="6 6" />
       <text x={x1} y={yc - fs * 0.6} textAnchor="end" fontSize={fs * 0.8} fontWeight="600" fill="var(--ink-2)">{t.costs}</text>
       <line x1={x0} y1={yt} x2={x1} y2={yt} stroke="var(--accent)" strokeWidth="1.5" strokeDasharray="2 6" />
-      <text x={x0 + 10} y={yt - fs * 0.6} fontSize={fs * 0.8} fontWeight="700" fill="var(--accent)">{t.target.split('[X]').flatMap((p, i) => (i === 0 ? [p] : [<tspan key={i} fontSize={fs * 0.7}>▲</tspan>, p]))}</text>
+      <g transform={`translate(${x0 + 10} ${yt - fs * 1.45})`} aria-hidden="true">
+        <rect x="0.75" y="0.75" width={fs - 1.5} height={fs - 1.5} fill="none" stroke="var(--ink)" strokeWidth="1.5" />
+        <path d={`M${fs * 0.26} ${fs * 0.72} L${fs * 0.5} ${fs * 0.28} L${fs * 0.74} ${fs * 0.72} Z`} fill="var(--accent)" />
+      </g>
+      <text x={x0 + 10 + fs * 1.4} y={yt - fs * 0.6} fontSize={fs * 0.8} fontWeight="700" fill="var(--accent)">{t.target.replace(' [X]', '').replace('[X]', '')}</text>
 
       <line x1={xc} y1={y1} x2={xc} y2={y0} stroke="var(--line-2)" strokeDasharray="3 5" />
       <line x1={xt} y1={y1} x2={xt} y2={y0} stroke="var(--accent)" strokeOpacity="0.6" strokeDasharray="3 5" />
