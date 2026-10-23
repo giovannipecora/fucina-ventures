@@ -47,7 +47,7 @@ export default {
     ],
   },
   buyer: {
-    eyebrow: 'Your buyer',
+    eyebrow: 'The buyer persona',
     h2: 'Before the idea, there is a person.',
     sub: 'We validate that your buyer really exists: someone who',
     items: ['has the problem you have identified;', 'is already looking for a solution;', 'is willing to try it on their own, and pay for it if they like it.'],
