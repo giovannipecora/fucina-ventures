@@ -6,7 +6,8 @@ import { useEffect, useRef, useState } from 'react';
 import { X as soglia } from './Soglia.jsx';
 
 const MESI = 24;
-const COSTI = 0.22; // linea dei costi fissi (quota dell'asse)
+const COSTI = 0.15; // costi di base al giorno 1 (quota dell'asse)
+const PENDENZA = 0.18; // i costi salgono un po', in modo lineare, con i clienti (aumento in 2 anni)
 const TARGET = 0.82; // traguardo ARR
 const PIATTEZZA = 4.4; // più alto = curva più piatta all'inizio
 const VELOCITA = { lenta: 22, media: 16, veloce: 11 }; // mese dello spin-off
@@ -17,11 +18,14 @@ function modello(speed) {
   const den = Math.exp(k * mT) - 1;
   const r = (m) => (TARGET * (Math.exp(k * m) - 1)) / den;
   const mOf = (v) => Math.log((v * den) / TARGET + 1) / k;
-  return { mT, r, mC: mOf(COSTI), mTop: Math.min(MESI, mOf(1)) };
+  const c = (m) => COSTI + (PENDENZA * m) / MESI;
+  let a = 0, b = mT; // dove i ricavi superano i costi
+  for (let i = 0; i < 40; i++) { const h = (a + b) / 2; if (r(h) < c(h)) a = h; else b = h; }
+  return { mT, r, c, mC: b, mTop: Math.min(MESI, mOf(1)) };
 }
 
 function Svg({ W, H, pad, t, fs, id, speed, month }) {
-  const { mT, r, mC, mTop } = modello(speed);
+  const { mT, r, c, mC, mTop } = modello(speed);
   const x0 = pad.l, x1 = W - pad.r, y0 = H - pad.b, y1 = pad.t;
   const X = (m) => x0 + (m / MESI) * (x1 - x0);
   const Y = (v) => y0 - Math.min(v, 1.02) * (y0 - y1);
@@ -31,10 +35,13 @@ function Svg({ W, H, pad, t, fs, id, speed, month }) {
   const curve = `M${pts(0, upto).join(' L')}`;
   const ghost = `M${pts(0, mTop).join(' L')}`;
   const dEnd = Math.min(upto, mC);
-  const deficit = dEnd > 0 ? `M${X(0)},${Y(COSTI)} L${pts(0, dEnd).join(' L')} L${X(dEnd)},${Y(COSTI)} Z` : '';
+  const cpts = (a, b) => steps(a, b).map((m) => `${X(m).toFixed(1)},${Y(c(m)).toFixed(1)}`);
+  const area = (a, b) => `M${pts(a, b).join(' L')} L${cpts(a, b).reverse().join(' L')} Z`;
+  const deficit = dEnd > 0 ? area(0, dEnd) : '';
   const sEnd = Math.min(upto, mT);
-  const surplus = sEnd > mC ? `M${X(mC)},${Y(COSTI)} L${pts(mC, sEnd).join(' L')} L${X(sEnd)},${Y(COSTI)} Z` : '';
-  const xc = X(mC), xt = X(mT), yc = Y(COSTI), yt = Y(TARGET);
+  const surplus = sEnd > mC ? area(mC, sEnd) : '';
+  const costLine = `M${cpts(0, MESI).join(' L')}`;
+  const xc = X(mC), xt = X(mT), yc = Y(c(MESI)), yt = Y(TARGET);
   const cur = { x: X(upto), y: Y(r(upto)) };
   const reached = month >= mT;
   const zone = month < mC ? 0 : reached ? 2 : 1;
@@ -68,8 +75,8 @@ function Svg({ W, H, pad, t, fs, id, speed, month }) {
       <line x1={x0} y1={y0} x2={x1} y2={y0} stroke="var(--line-2)" strokeWidth="1.5" />
       <line x1={x0} y1={y0} x2={x0} y2={y1} stroke="var(--line-2)" strokeWidth="1.5" />
 
-      <line x1={x0} y1={yc} x2={x1} y2={yc} stroke="var(--ink-2)" strokeWidth="1.5" strokeDasharray="6 6" />
-      <text x={x1} y={yc - fs * 0.6} textAnchor="end" fontSize={fs * 0.8} fontWeight="600" fill="var(--ink-2)">{t.costs}</text>
+      <path d={costLine} fill="none" stroke="var(--ink-2)" strokeWidth="1.5" strokeDasharray="6 6" />
+      <text x={x1} y={id === 'tall' ? yc + fs * 1.5 : yc - fs * 0.9} textAnchor="end" fontSize={fs * 0.8} fontWeight="600" fill="var(--ink-2)">{id === 'tall' ? t.costs.split(' · ')[0] : t.costs}</text>
       <line x1={x0} y1={yt} x2={x1} y2={yt} stroke="var(--accent)" strokeWidth="1.5" strokeDasharray="2 6" />
       <g transform={`translate(${x0 + 10} ${yt - fs * 1.45})`} aria-hidden="true">
         <rect x="0.75" y="0.75" width={fs - 1.5} height={fs - 1.5} fill="none" stroke="var(--ink)" strokeWidth="1.5" />
