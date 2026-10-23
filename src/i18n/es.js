@@ -18,7 +18,7 @@ export default {
     langLabel: 'Idioma',
   },
   hero: {
-    eyebrow: 'Para managers, estudiantes y graduados de MBA y cualquiera que haya identificado un problema y a quien esté dispuesto a pagar por una solución',
+    eyebrow: 'Para managers, estudiantes y graduados de MBA, y para quien ha encontrado un problema y a alguien dispuesto a pagar por resolverlo',
     h1a: 'No te damos dinero.',
     h1b: 'Te damos una empresa: segura, escalable, protegida y capaz de vender para validar que tu comprador existe.',
     sub: 'Con la IA, hacer crecer una empresa ya no requiere millones: requiere gente que sepa construir. Tú pones la idea, nosotros la construimos y te damos todo lo necesario para facturar desde el primer día. A cambio, nos hacemos socios.',
@@ -29,7 +29,7 @@ export default {
     ['1K + 1K', '1.000 € tú, 1.000 € nosotros: hasta 2 años de incubación'],
     ['Idea + trabajo', 'tú pones la idea, nosotros el trabajo y la sociedad'],
     ['AI-native', 'equipo pequeño, producto grande'],
-    ['Equity', 'nuestra única moneda'],
+    ['Equity', 'solo ganamos si creces'],
   ],
   perche: {
     eyebrow: '01 · Por qué ahora',
@@ -40,10 +40,10 @@ export default {
     quoteB: 'Nosotros hacemos el trabajo.',
     intro: 'Pero un prototipo hecho con IA no es una empresa. Tiene que ser:',
     items: [
-      ['Seguro', 'Privacidad desde el diseño, modelos de IA que garantizan la privacidad de los datos, controles antes del lanzamiento.'],
+      ['Seguro', 'Privacidad desde el diseño, modelos de IA que no exponen los datos, controles antes del lanzamiento.'],
       ['Escalable', 'Una arquitectura y modelos de IA que aguantan el crecimiento, sin reescribirlo todo desde cero.'],
       ['Protegido', 'Una sociedad y contratos que protegen el código, la marca, los datos y los clientes.'],
-      ['Vendido', 'Un producto que nadie conoce no existe. Validamos la idea con el Go-to-Market Validation Engine y un enfoque Product-Led Growth: es el propio producto el que encuentra y convence a los primeros clientes.'],
+      ['Que vende', 'Un producto que nadie conoce no existe. Validamos la idea con el Go-to-Market Validation Engine y un enfoque Product-Led Growth: es el propio producto el que encuentra y convence a los primeros clientes.'],
     ],
   },
   buyer: {
@@ -61,11 +61,11 @@ export default {
   modello: {
     eyebrow: '02 · El modelo',
     h2: 'No es un fondo. No es una agencia. Es un socio que construye.',
-    pathLabel: 'El camino: idea, producto, empresa',
+    pathLabel: 'El camino: idea, validación, empresa',
     path: [
       { n: '01', title: 'Idea', tag: 'Tú pones', text: 'Un problema que conoces desde dentro, la solución, quién pagaría por ella.' },
       { n: '02', title: 'Validación', tag: 'Nosotros construimos', text: 'Producto, seguridad y el Go-to-Market Validation Engine. Y el paquete para cobrar: cuenta bancaria, facturación, contabilidad, contratos.' },
-      { n: '', title: 'Empresa', tag: 'Crecemos juntos', text: 'Cuando los ingresos anuales por suscripciones (ARR) llegan a [X], la empresa hace spin-off en una entidad legal independiente: clientes, código y marca pasan a ella. Seguimos siendo socios.' },
+      { n: '', title: 'Empresa', tag: 'Crecemos juntos', text: 'Cuando los ingresos anuales por suscripciones (ARR) llegan a [X], la empresa hace spin-off y se convierte en una sociedad independiente: clientes, código y marca pasan a ella. Seguimos siendo socios.' },
     ],
     steps: [
       ['Propón', 'Dos páginas, sin business plan.'],
@@ -78,18 +78,18 @@ export default {
     growth: {
       eyebrow: 'El camino de crecimiento',
       h3: 'Ingeniamos el crecimiento, paso a paso.',
-      sub: 'El primer paso es nuestra promesa: una plataforma online que tu comprador encuentra cuando busca, prueba gratis y paga por su cuenta. Cuando los ingresos anuales por suscripciones (ARR) son sostenibles, la empresa pasa a un vehículo independiente. Después construimos el camino hasta los grandes clientes.',
+      sub: 'El primer paso es nuestra promesa: una plataforma online que tu comprador encuentra cuando busca, prueba gratis y paga por su cuenta. Cuando los ingresos anuales por suscripciones (ARR) son sostenibles, la empresa se convierte en una sociedad independiente. Desde ahí, dos caminos: nuevos inversores, o crecer con sus propios ingresos.',
       fork: {
         label: 'Tras el spin-off: una empresa clásica, con dos caminos',
         paths: [
-          { k: 'A', name: 'Empresa estándar', tag: 'Nuevos inversores · rondas grandes', text: 'La empresa abre su capital a nuevos inversores y capta inversiones importantes para acelerar.' },
-          { k: 'B', name: 'Pure Product-Led Growth', tag: 'Mismo modelo Fucina · crece con sus propios ingresos', text: 'Como A, una empresa independiente. Pero sin nuevos inversores: sigue siendo Product-Led Growth puro, crece con sus propios ingresos y seguimos siendo socios.' },
+          { k: 'A', name: 'Con nuevos inversores', tag: 'Más capital, más velocidad', text: 'La sociedad abre su capital y levanta rondas importantes para acelerar.' },
+          { k: 'B', name: 'Pure Product-Led Growth', tag: 'Mismo modelo Fucina · crece con sus propios ingresos', text: 'Sin nuevos inversores: sigue siendo Product-Led Growth, crece con sus propios ingresos y seguimos siendo socios.' },
         ],
         goal: 'Caso ideal', only: 'Solo Product-Led Growth', onlyText: 'El producto se vende solo: el comprador lo encuentra, lo prueba y lo elige. Sin un pesado equipo de ventas.',
       },
       stages: [
         { n: '01', name: 'Product-Led Growth', tag: 'Dentro de Fucina', promise: 'Nuestra promesa', text: 'Una plataforma online que tu comprador:', steps: ['encuentra cuando busca una solución', 'prueba gratis', 'paga por su cuenta, por suscripción'], after: 'La idea se valida con facturas reales.' },
-        { n: 'Hito', name: 'Spin-off', tag: 'Ingresos anuales (ARR) · [X]', text: 'Vehículo independiente: clientes, código y marca pasan a la nueva sociedad.', accent: true },
+        { n: 'Hito', name: 'Spin-off', tag: 'Ingresos anuales (ARR) · [X]', text: 'Nace la sociedad independiente: clientes, código y marca pasan a ella.', accent: true },
         { n: '02', later: true, name: 'Sales-Led Growth', tag: 'Sociedad independiente', text: 'Un motor de ventas para clientes más grandes y contratos más importantes.' },
         { n: '03', later: true, name: 'Enterprise & Partner-Led', tag: 'Escala', text: 'Grandes empresas y partners que llevan el producto a sus mercados.' },
       ],
@@ -98,7 +98,7 @@ export default {
       caption: 'Tres formas de empezar',
       cols: ['Venture capital', 'Agencia de desarrollo', 'Fucina'],
       rows: [
-        ['Qué te da', 'Capital', 'Horas de trabajo', 'El producto, terminado y lanzado'],
+        ['Qué te da', 'Capital', 'Horas de trabajo', 'Una empresa lista para vender'],
         ['Qué pide', 'Equity', 'Facturas', 'Equity y 1.000 € (nosotros ponemos lo mismo)'],
         ['Quién construye', 'Tú, contratando un equipo', 'Ellos, mientras pagues', 'Nosotros, como socios. Tú sigues con tu actividad'],
         ['Para cobrar', 'Abres tú sociedad, cuenta, facturas', 'Abres tú sociedad, cuenta, facturas', 'Todo listo desde el primer día'],
@@ -108,7 +108,7 @@ export default {
     pacts: ['Pactos claros y sencillos.', 'Contratos con modelos estándar de mercado, que inversores y abogados ya conocen: participaciones, roles, confidencialidad, spin-off con [X] de ARR, salida a los 2 años, código y marca. Sin cláusulas ocultas.'],
   },
   arr: {
-    eyebrow: 'Las cuentas, desde el primer día',
+    eyebrow: 'Las cuentas, a la vista',
     h3: 'Los ingresos trabajan para la empresa desde el primer día.',
     sub: 'Cada euro de suscripción cubre primero los costes: servidores, servicios necesarios, costes básicos. Suben un poco con los clientes y todos son transparentes y documentados. Lo que sobra se reinvierte para dar a conocer el producto, hasta el ARR que lleva al spin-off.',
     aria: 'Gráfico ilustrativo: los ingresos anuales crecen de forma exponencial, primero por debajo de los costes y luego por encima, hasta el hito del spin-off.',
@@ -127,8 +127,8 @@ export default {
     play: 'Ver el crecimiento',
     zones: [
       ['Sin riesgo', 'Mientras los ingresos no cubren los costes, la diferencia la cubrimos nosotros: tú no pagas nada más.'],
-      ['Inversión', 'Cuando los ingresos superan los costes, todo lo que sobra vuelve a la empresa para aumentar su visibilidad.'],
-      ['Spin-off', 'Cuando el ARR alcanza el hito [X], la empresa pasa a una entidad legal independiente.'],
+      ['Inversión', 'Cuando los ingresos superan los costes, todo lo que sobra vuelve a la empresa para darla a conocer.'],
+      ['Spin-off', 'Cuando el ARR alcanza el hito [X], la empresa se convierte en una sociedad independiente.'],
     ],
   },
   portfolio: {
@@ -163,10 +163,10 @@ export default {
     items: [
       ['¿Cuánta equity pedís?', 'Depende de cuánto haya que construir. Te la proponemos después de la llamada, por escrito. [Por definir: la regla general]'],
       ['¿Cuánto pago?', 'Tú pones 1.000 € y nosotros otros 1.000 €, para una incubación de hasta 2 años. Desarrollo, cuenta, facturación y contabilidad son nuestra inversión mientras la empresa está dentro de Fucina. [Por confirmar: costes del spin-off]'],
-      ['¿Cuándo pasa a ser mi sociedad?', 'Cuando los ingresos anuales por suscripciones (ARR) llegan a [X]. El umbral y el reparto están en el acuerdo desde el primer día.'],
+      ['¿Cuándo pasa a ser una sociedad independiente?', 'Cuando los ingresos anuales por suscripciones (ARR) llegan a [X]. El umbral y el reparto están en el acuerdo desde el primer día.'],
       ['¿Mi idea está segura?', 'Firmamos un acuerdo de confidencialidad antes de entrar en detalles. [Por confirmar]'],
       ['¿Y si no hay química?', 'No significa que tu idea sea mala. Solo que no encaja en los modelos con los que hoy sabemos construir bien. Te lo diremos siempre, con claridad.'],
-      ['¿De quién es el código?', 'En el spin-off, código, marca y clientes pasan a tu sociedad. Hasta entonces, los custodiamos nosotros. [Por confirmar]'],
+      ['¿De quién es el código?', 'En el spin-off, código, marca y clientes pasan a la nueva sociedad, de la que eres socio. Hasta entonces, los custodiamos nosotros. [Por confirmar]'],
       ['¿Y si no funciona?', 'No nos debes nada: además de los 1.000 € de la incubación, solo habrás invertido tu tiempo.'],
       ['¿Y si yo sigo creyendo en ella y vosotros no?', 'Está en el contrato desde el primer día: a los 2 años puedes comprar nuestra participación a un precio con descuento. [Por definir: el precio]'],
     ],
@@ -175,7 +175,7 @@ export default {
     eyebrow: 'Entra en Fucina',
     h2a: '¿Tienes la idea?',
     h2b: 'Nosotros, el yunque y el martillo.',
-    p: '¿Conoces un problema y su solución? Cuéntanoslo en dos páginas. Las leemos todas y respondemos a todos.',
+    p: '¿Conoces un problema, su solución y quién la pagaría? Cuéntanoslo en dos páginas. Las leemos todas y respondemos a todos.',
     lookTitle: 'Qué buscamos',
     look: [
       ['Problemas cotidianos', 'que hacen perder tiempo y dinero a personas y empresas.'],

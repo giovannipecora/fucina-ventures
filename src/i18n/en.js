@@ -18,7 +18,7 @@ export default {
     langLabel: 'Language',
   },
   hero: {
-    eyebrow: 'For managers, MBA students and graduates, and anyone who has spotted a problem and someone willing to pay for a solution',
+    eyebrow: 'For managers, MBA students and graduates, and anyone who has found a problem and someone willing to pay to solve it',
     h1a: 'We don\'t give you money.',
     h1b: 'We give you a company: secure, scalable, protected, and able to sell, to prove your buyer exists.',
     sub: 'With AI, growing a company no longer takes millions: it takes people who know how to build. You bring the idea, we build it and give you everything you need to get paid from day one. In return, we become partners.',
@@ -29,7 +29,7 @@ export default {
     ['1K + 1K', '€1,000 from you, €1,000 from us: up to 2 years of incubation'],
     ['Idea + work', 'you bring the idea, we bring the work and the legal entity'],
     ['AI-native', 'small team, big product'],
-    ['Equity', 'our only currency'],
+    ['Equity', 'we only earn if you grow'],
   ],
   perche: {
     eyebrow: '01 · Why now',
@@ -40,10 +40,10 @@ export default {
     quoteB: 'We do the work.',
     intro: 'But a prototype built with AI is not a company. It has to be:',
     items: [
-      ['Secure', 'Privacy by design, AI models that guarantee data privacy, checks before launch.'],
+      ['Secure', 'Privacy by design, AI models that don\'t expose data, checks before launch.'],
       ['Scalable', 'An architecture and AI models that keep up with growth, with no rewrite from scratch.'],
       ['Protected', 'A legal entity and contracts that protect the code, brand, data and customers.'],
-      ['Sold', 'A product nobody knows about doesn\'t exist. We validate the idea with the Go-to-Market Validation Engine and a Product-Led Growth approach: the product itself finds and wins the first customers.'],
+      ['Selling', 'A product nobody knows about doesn\'t exist. We validate the idea with the Go-to-Market Validation Engine and a Product-Led Growth approach: the product itself finds and wins the first customers.'],
     ],
   },
   buyer: {
@@ -61,11 +61,11 @@ export default {
   modello: {
     eyebrow: '02 · The model',
     h2: 'Not a fund. Not an agency. A partner who builds.',
-    pathLabel: 'The path: idea, product, company',
+    pathLabel: 'The path: idea, validation, company',
     path: [
       { n: '01', title: 'Idea', tag: 'You bring', text: 'A problem you know from the inside, the solution, who would pay for it.' },
       { n: '02', title: 'Validation', tag: 'We build', text: 'Product, security and the Go-to-Market Validation Engine. Plus the kit to get paid: bank account, invoicing, accounts, contracts.' },
-      { n: '', title: 'Company', tag: 'We grow together', text: 'When annual subscription revenue (ARR) reaches [X], the company spins off into an independent legal entity: customers, code and brand move to it. We stay partners.' },
+      { n: '', title: 'Company', tag: 'We grow together', text: 'When annual subscription revenue (ARR) reaches [X], the company spins off and becomes an independent company: customers, code and brand move to it. We stay partners.' },
     ],
     steps: [
       ['Pitch', 'Two pages, no business plan.'],
@@ -78,18 +78,18 @@ export default {
     growth: {
       eyebrow: 'The growth path',
       h3: 'We engineer growth, one stage at a time.',
-      sub: 'The first stage is our promise: an online platform your buyer finds when searching, tries for free and pays for on their own. Once annual subscription revenue (ARR) is sustainable, the company moves into an independent vehicle. Then we build the path all the way to large customers.',
+      sub: 'The first stage is our promise: an online platform your buyer finds when searching, tries for free and pays for on their own. Once annual subscription revenue (ARR) is sustainable, it becomes an independent company. From there, two roads: new investors, or growth on its own revenue.',
       fork: {
         label: 'After the spin-off: a standard company, with two roads',
         paths: [
-          { k: 'A', name: 'Standard company', tag: 'New investors · large rounds', text: 'The company opens its capital to new investors and raises significant funding to accelerate.' },
-          { k: 'B', name: 'Pure Product-Led Growth', tag: 'Same Fucina model · grows on its own revenue', text: 'Like A, an independent company. But with no new investors: it stays pure Product-Led Growth, grows on its own revenue and we stay partners.' },
+          { k: 'A', name: 'With new investors', tag: 'More capital, more speed', text: 'The company opens its capital and raises large rounds to accelerate.' },
+          { k: 'B', name: 'Pure Product-Led Growth', tag: 'Same Fucina model · grows on its own revenue', text: 'No new investors: it stays Product-Led Growth, grows on its own revenue and we stay partners.' },
         ],
         goal: 'Ideal case', only: 'Product-Led Growth only', onlyText: 'The product sells itself: the buyer finds it, tries it and chooses it. No heavy sales team.',
       },
       stages: [
         { n: '01', name: 'Product-Led Growth', tag: 'Inside Fucina', promise: 'Our promise', text: 'An online platform your buyer:', steps: ['finds when looking for a solution', 'tries for free', 'pays for on their own, by subscription'], after: 'The idea is proven with real invoices.' },
-        { n: 'Milestone', name: 'Spin-off', tag: 'Annual revenue (ARR) · [X]', text: 'Independent vehicle: customers, code and brand move to the new company.', accent: true },
+        { n: 'Milestone', name: 'Spin-off', tag: 'Annual revenue (ARR) · [X]', text: 'The independent company is born: customers, code and brand move to it.', accent: true },
         { n: '02', later: true, name: 'Sales-Led Growth', tag: 'Independent company', text: 'A sales engine for bigger customers and larger contracts.' },
         { n: '03', later: true, name: 'Enterprise & Partner-Led', tag: 'Scale', text: 'Large enterprises and partners who take the product into their markets.' },
       ],
@@ -98,7 +98,7 @@ export default {
       caption: 'Three ways to start',
       cols: ['Venture capital', 'Development agency', 'Fucina'],
       rows: [
-        ['What you get', 'Capital', 'Hours of work', 'The product, built and launched'],
+        ['What you get', 'Capital', 'Hours of work', 'A company ready to sell'],
         ['What it costs', 'Equity', 'Invoices', 'Equity and €1,000 (we put in the same)'],
         ['Who builds', 'You, by hiring a team', 'They do, while you pay', 'We do, as partners. You keep running your own work'],
         ['To get paid', 'You set up company, account, invoicing', 'You set up company, account, invoicing', 'Everything ready from day one'],
@@ -108,7 +108,7 @@ export default {
     pacts: ['Clear, simple terms.', 'Contracts on market-standard templates that investors and lawyers already know: equity, roles, confidentiality, spin-off at [X] ARR, exit after 2 years, code and brand. No hidden clauses.'],
   },
   arr: {
-    eyebrow: 'The numbers, from day one',
+    eyebrow: 'The numbers, in the open',
     h3: 'Revenue works for the company from day one.',
     sub: 'Every subscription euro first covers the costs: servers, required services, base costs. They rise a little with customers, and all are transparent and documented. Whatever is left is reinvested to make the product known, until the ARR that triggers the spin-off.',
     aria: 'Illustrative chart: annual revenue grows exponentially, first below the costs and then above them, up to the spin-off milestone.',
@@ -127,8 +127,8 @@ export default {
     play: 'Play the growth',
     zones: [
       ['No risk', 'Until revenue covers the costs, we cover the gap: you pay nothing extra.'],
-      ['Investment', 'Once revenue exceeds costs, everything left over goes back into the company to grow its visibility.'],
-      ['Spin-off', 'When ARR reaches the [X] milestone, the company moves into an independent legal entity.'],
+      ['Investment', 'Once revenue exceeds costs, everything left over goes back into the company to make it known.'],
+      ['Spin-off', 'When ARR reaches the [X] milestone, it becomes an independent company.'],
     ],
   },
   portfolio: {
@@ -163,10 +163,10 @@ export default {
     items: [
       ['How much equity do you ask for?', 'It depends on how much there is to build. We propose it after the call, in writing. [To be defined: the general rule]'],
       ['How much do I pay?', 'You put in €1,000 and we put in another €1,000, for up to 2 years of incubation. Development, bank account, invoicing and accounts are our investment while the company is inside Fucina. [To be confirmed: spin-off costs]'],
-      ['When does it become my company?', 'When annual subscription revenue (ARR) reaches [X]. The threshold and the equity split are in the agreement from day one.'],
+      ['When does it become an independent company?', 'When annual subscription revenue (ARR) reaches [X]. The threshold and the equity split are in the agreement from day one.'],
       ['Is my idea safe?', 'We sign a confidentiality agreement before getting into the details. [To be confirmed]'],
       ['What if it doesn\'t click?', 'It doesn\'t mean your idea is bad. It just means it doesn\'t fit the templates we know how to build well today. We\'ll always tell you, clearly.'],
-      ['Who owns the code?', 'At spin-off, code, brand and customers move to your company. Until then, we hold them. [To be confirmed]'],
+      ['Who owns the code?', 'At spin-off, code, brand and customers move to the new company, which you co-own. Until then, we hold them. [To be confirmed]'],
       ['What if it doesn\'t work?', 'You owe us nothing: beyond the €1,000 for incubation, you\'ll only have invested your time.'],
       ['What if I still believe in it and you don\'t?', 'It\'s in the contract from day one: after 2 years you can buy our stake at a discounted price. [To be defined: the price]'],
     ],
@@ -175,7 +175,7 @@ export default {
     eyebrow: 'Step into the forge',
     h2a: 'Got the idea?',
     h2b: 'We\'ve got the anvil and hammer.',
-    p: 'Know a problem and its solution? Tell us in two pages. We read every one and reply to everyone.',
+    p: 'Know a problem, its solution and who would pay for it? Tell us in two pages. We read every one and reply to everyone.',
     lookTitle: 'What we look for',
     look: [
       ['Everyday problems', 'that cost people and businesses time and money.'],
