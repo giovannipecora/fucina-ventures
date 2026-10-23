@@ -81,7 +81,7 @@ export default {
       h3: 'Ingegnerizziamo la crescita, un passo alla volta.',
       sub: 'Il primo passo è la nostra promessa: una piattaforma online che il tuo buyer trova quando cerca, prova gratis e paga da solo. Quando i ricavi annui degli abbonamenti (ARR) sono sostenibili, l\'azienda passa a un veicolo indipendente. Poi costruiamo il percorso fino ai grandi clienti.',
       fork: {
-        label: 'Dopo lo spin-off, due strade',
+        label: 'Dopo lo spin-off: una società classica, con due strade',
         paths: [
           { k: 'A', name: 'Società standard', tag: 'Nuovi investitori · round importanti', text: 'La società apre il capitale a nuovi investitori e raccoglie investimenti alti per accelerare.' },
           { k: 'B', name: 'Pure Product-Led Growth', tag: 'Stesso modello Fucina · cresce con i propri ricavi', text: 'Come A, una società indipendente. Ma senza nuovi investitori: resta Product-Led Growth puro, cresce con i suoi ricavi e noi restiamo soci.' },

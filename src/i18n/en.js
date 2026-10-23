@@ -81,7 +81,7 @@ export default {
       h3: 'We engineer growth, one stage at a time.',
       sub: 'The first stage is our promise: an online platform your buyer finds when searching, tries for free and pays for on their own. Once annual subscription revenue (ARR) is sustainable, the company moves into an independent vehicle. Then we build the path all the way to large customers.',
       fork: {
-        label: 'After the spin-off, two roads',
+        label: 'After the spin-off: a standard company, with two roads',
         paths: [
           { k: 'A', name: 'Standard company', tag: 'New investors · large rounds', text: 'The company opens its capital to new investors and raises significant funding to accelerate.' },
           { k: 'B', name: 'Pure Product-Led Growth', tag: 'Same Fucina model · grows on its own revenue', text: 'Like A, an independent company. But with no new investors: it stays pure Product-Led Growth, grows on its own revenue and we stay partners.' },
