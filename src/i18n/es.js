@@ -51,8 +51,6 @@ export default {
     h2: 'Antes de la idea, hay una persona.',
     sub: 'Validamos que tu comprador existe de verdad: alguien que',
     items: ['tiene el problema que has identificado;', 'ya está buscando una solución;', 'está dispuesto a probarla por su cuenta, y a pagarla si le gusta.'],
-    close: 'Si existe, la empresa se construye a su alrededor.',
-    bingo: ['Si tú también tienes el problema y pagarías por resolverlo:', '¡Bingo!'],
     img: 'El comprador: una persona con el problema, que busca una solución y la paga si le gusta',
   },
   band: {

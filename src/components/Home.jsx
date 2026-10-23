@@ -118,8 +118,6 @@ function BuyerSec({ t }) {
               <li key={it} className={i === 2 ? 'key' : undefined}>{it}</li>
             ))}
           </ol>
-          <p className="close">{b.close}</p>
-          <p className="bingo"><span>{b.bingo[0]}</span> <span className="bingo-hit"><span className="logo-spin" aria-hidden="true"><i /></span><strong>{b.bingo[1]}</strong></span></p>
         </div>
       </div>
     </section>

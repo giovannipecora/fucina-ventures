@@ -494,10 +494,3 @@ h1, h2, h3 { margin: 0; font-weight: 800; font-stretch: var(--wide); letter-spac
 .soglia::after { content: ""; position: absolute; left: 20%; right: 20%; top: 24%; bottom: 22%; background: var(--accent); clip-path: polygon(50% 0, 100% 100%, 0 100%); }
 .path-step.final .soglia::after { background: currentColor; }
 
-.buyer .bingo { margin-top: 14px; display: inline-flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; padding: 12px 18px; border-left: 3px solid var(--accent); background: var(--bg-2); font-size: 19px; font-weight: 600; }
-.buyer .bingo strong { color: var(--accent); font-weight: 800; font-stretch: var(--wide); }
-.bingo-hit { display: inline-flex; align-items: center; gap: 10px; }
-.logo-spin { position: relative; display: inline-grid; place-items: center; width: 1.7em; height: 1.7em; border: 2px solid var(--ink); flex: none; }
-.logo-spin i { width: 0.95em; height: 0.85em; background: var(--accent); clip-path: polygon(50% 0, 100% 100%, 0 100%); transform-origin: 50% 62%; animation: vortice 0.45s linear infinite; }
-@keyframes vortice { to { transform: rotate(360deg); } }
-@media (prefers-reduced-motion: reduce) { .logo-spin i { animation: none; } }
