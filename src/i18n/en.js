@@ -52,7 +52,7 @@ export default {
     sub: 'We validate that your buyer really exists: someone who',
     items: ['has the problem you have identified;', 'is already looking for a solution;', 'is willing to try it on their own, and pay for it if they like it.'],
     close: 'If they exist, the company is built around them.',
-    bingo: ['And if you are a buyer too?', 'Bingo.'],
+    bingo: ['If you have the problem too, and would pay to solve it:', 'Bingo.'],
     img: 'The buyer: a person with the problem, looking for a solution, who pays if they like it',
   },
   band: {
