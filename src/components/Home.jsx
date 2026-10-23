@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import { Buyer, ModuloEsempio, Ruolo } from './Disegni.jsx';
 import { privacyOf } from '../routes.js';
 import GraficoArr from './Grafico.jsx';
+import { X } from './Soglia.jsx';
 
 const SPARKS = [
   [74, 0, -40], [78, 0.8, -18], [82, 1.6, -62], [76, 2.3, 12], [80, 3.1, -30],
@@ -148,7 +149,7 @@ function Modello({ t }) {
 
         <ol className="steps">
           {m.steps.map(([b, s]) => (
-            <li key={b}><b>{b}</b><span>{s}</span></li>
+            <li key={b}><b>{b}</b><span>{X(s)}</span></li>
           ))}
         </ol>
 
@@ -162,8 +163,8 @@ function Modello({ t }) {
                 {s.promise && <div className="promise-badge">{s.promise}</div>}
                 <div className="stage-n">{s.n}</div>
                 <h4>{s.name}</h4>
-                <div className="stage-tag">{s.tag}</div>
-                <p>{s.text}</p>
+                <div className="stage-tag">{X(s.tag)}</div>
+                <p>{X(s.text)}</p>
                 {s.steps && (
                   <ol className="promise-steps">
                     {s.steps.map((x) => <li key={x}>{x}</li>)}
@@ -237,7 +238,7 @@ function Modello({ t }) {
             ))}
           </div>
         </div>
-        <p className="pacts"><strong>{m.pacts[0]}</strong> {m.pacts[1]}</p>
+        <p className="pacts"><strong>{m.pacts[0]}</strong> {X(m.pacts[1])}</p>
       </div>
     </section>
   );
@@ -256,8 +257,8 @@ function FragmentStep({ s, last }) {
           <div className="path-n num">{s.n}</div>
         )}
         <h3>{s.title}</h3>
-        <div className="path-tag">{s.tag}</div>
-        <p>{s.text}</p>
+        <div className="path-tag">{X(s.tag)}</div>
+        <p>{X(s.text)}</p>
       </div>
       {!last && <Arrow />}
     </>
@@ -335,7 +336,7 @@ function Faq({ t }) {
           {f.items.map(([q, a]) => (
             <details className="faq-item" key={q}>
               <summary>{q}</summary>
-              <p>{a}</p>
+              <p>{X(a)}</p>
             </details>
           ))}
         </div>

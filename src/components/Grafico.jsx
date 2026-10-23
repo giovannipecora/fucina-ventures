@@ -3,6 +3,7 @@
 // Il cursore muove il tempo; la velocità cambia quanto la curva resta piatta.
 // Nessun numero reale: solo la forma del percorso.
 import { useEffect, useRef, useState } from 'react';
+import { X as soglia } from './Soglia.jsx';
 
 const MESI = 36;
 const COSTI = 0.22; // linea dei costi fissi (quota dell'asse)
@@ -70,7 +71,7 @@ function Svg({ W, H, pad, t, fs, id, speed, month }) {
       <line x1={x0} y1={yc} x2={x1} y2={yc} stroke="var(--ink-2)" strokeWidth="1.5" strokeDasharray="6 6" />
       <text x={x1} y={yc - fs * 0.6} textAnchor="end" fontSize={fs * 0.8} fontWeight="600" fill="var(--ink-2)">{t.costs}</text>
       <line x1={x0} y1={yt} x2={x1} y2={yt} stroke="var(--accent)" strokeWidth="1.5" strokeDasharray="2 6" />
-      <text x={x0 + 10} y={yt - fs * 0.6} fontSize={fs * 0.8} fontWeight="700" fill="var(--accent)">{t.target}</text>
+      <text x={x0 + 10} y={yt - fs * 0.6} fontSize={fs * 0.8} fontWeight="700" fill="var(--accent)">{t.target.split('[X]').flatMap((p, i) => (i === 0 ? [p] : [<tspan key={i} fontSize={fs * 0.7}>▲</tspan>, p]))}</text>
 
       <line x1={xc} y1={y1} x2={xc} y2={y0} stroke="var(--line-2)" strokeDasharray="3 5" />
       <line x1={xt} y1={y1} x2={xt} y2={y0} stroke="var(--accent)" strokeOpacity="0.6" strokeDasharray="3 5" />
@@ -157,7 +158,7 @@ export default function GraficoArr({ t }) {
         {t.zones.map(([z, txt], i) => (
           <li key={z} className={i === zone ? 'on' : undefined}>
             <span className="arr-n" aria-hidden="true">{i + 1}</span>
-            <div><b>{z}</b><p>{txt}</p></div>
+            <div><b>{z}</b><p>{soglia(txt)}</p></div>
           </li>
         ))}
       </ol>
