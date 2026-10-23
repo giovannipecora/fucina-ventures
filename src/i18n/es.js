@@ -18,7 +18,7 @@ export default {
     langLabel: 'Idioma',
   },
   hero: {
-    eyebrow: 'Venture builder AI-native · para managers, MBA y cualquiera que haya identificado un problema y a quien esté dispuesto a pagar por una solución',
+    eyebrow: 'Venture builder AI-native · para managers, estudiantes y graduados de MBA y cualquiera que haya identificado un problema y a quien esté dispuesto a pagar por una solución',
     h1a: 'No te damos dinero.',
     h1b: 'Te damos una empresa: segura, escalable, protegida y capaz de vender para validar que tu comprador existe.',
     sub: 'Con la IA, hacer crecer una empresa ya no requiere millones: requiere gente que sepa construir. Tú pones la idea, nosotros la construimos y te damos todo lo necesario para facturar desde el primer día. A cambio, nos hacemos socios.',
@@ -149,7 +149,7 @@ export default {
     look: [
       ['Problemas cotidianos', 'que hacen perder tiempo y dinero a personas y empresas.'],
       ['Managers', 'que ven el problema cada día en su empresa o en su sector.'],
-      ['MBA', 'que saben convertir un problema en un modelo de negocio.'],
+      ['Estudiantes y graduados de MBA', 'que saben convertir un problema en un modelo de negocio.'],
       ['Software en el centro', 'web, apps, IA: donde construir bien es la ventaja.'],
       ['Privacidad desde el principio', 'productos que respetan a las personas y sus datos.'],
     ],
