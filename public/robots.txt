@@ -1,5 +1,8 @@
+# Sito in preparazione: per ora non indicizzare.
+# Al lancio sostituire con:
+#   User-agent: *
+#   Allow: /
+#   Disallow: /api/
+#   Sitemap: https://fucina.ventures/sitemap.xml
 User-agent: *
-Allow: /
-Disallow: /api/
-
-Sitemap: https://fucina.ventures/sitemap.xml
+Disallow: /

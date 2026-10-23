@@ -1,6 +1,6 @@
 import { renderToString } from 'react-dom/server';
 import App from './App.jsx';
-import { findRoute, routes, alternates, SITE } from './routes.js';
+import { findRoute, routes, alternates, SITE, INDICIZZABILE } from './routes.js';
 import { testi } from './i18n/index.js';
 
 export { routes, SITE };
@@ -15,7 +15,8 @@ export function render(path) {
   const head = [
     `<title>${esc(meta.title)}</title>`,
     `<meta name="description" content="${esc(meta.description)}" />`,
-    route.noindex ? '<meta name="robots" content="noindex" />' : `<link rel="canonical" href="${url}" />`,
+    route.noindex || !INDICIZZABILE ? '<meta name="robots" content="noindex, nofollow" />' : '',
+    route.noindex ? '' : `<link rel="canonical" href="${url}" />`,
     ...(route.noindex ? [] : alternates(route).map((a) => `<link rel="alternate" hreflang="${a.lang}" href="${SITE}${a.path}" />`)),
     ...(route.noindex ? [] : [`<link rel="alternate" hreflang="x-default" href="${SITE}${alternates(route).find((a) => a.lang === 'it').path}" />`]),
     `<meta property="og:type" content="website" />`,

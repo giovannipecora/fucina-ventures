@@ -47,6 +47,8 @@ Framework preset: None · Build command: `npm run build` · Build output directo
 
 ## Prima di pubblicare davvero
 
+- [ ] **Togliere il blocco per Google**: `INDICIZZABILE = true` in `src/routes.js`, `robots.txt` come indicato nel file, togliere `X-Robots-Tag` da `public/_headers`.
+
 - [ ] Partita IVA vera al posto di `IT01234567890` (nei tre file delle lingue, `footer.company`).
 - [ ] Riempire i punti tra parentesi quadre: soglia `[X]` di ARR, quota di equity, prezzo di uscita, costi dello spin-off, accordo di riservatezza.
 - [ ] Informativa privacy: è una **bozza** (`privacyPage` nei file delle lingue), da far validare a un legale; mettere l'email per la privacy.

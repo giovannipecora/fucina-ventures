@@ -1,6 +1,10 @@
 // Tutte le pagine del sito. Il prerender crea un file HTML per ognuna.
 export const SITE = 'https://fucina.ventures';
 
+// Finché i testi non sono definitivi il sito non si fa indicizzare da Google.
+// Al lancio: metti true, e in public/robots.txt e public/_headers togli il blocco.
+export const INDICIZZABILE = false;
+
 export const routes = [
   { path: '/', lang: 'it', page: 'home', alt: 'home' },
   { path: '/en/', lang: 'en', page: 'home', alt: 'home' },
