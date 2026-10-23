@@ -73,7 +73,7 @@ h1, h2, h3 { margin: 0; font-weight: 800; font-stretch: var(--wide); letter-spac
 .btn-primary:hover { background: #ff7b3d; box-shadow: 0 12px 32px -12px rgba(242, 105, 42, 0.9); transform: translateY(-1px); }
 .btn-ghost { border-color: rgba(241, 236, 228, 0.35); color: var(--ink); background: rgba(20, 18, 16, 0.25); }
 .btn-ghost:hover { border-color: var(--ink); background: rgba(241, 236, 228, 0.08); }
-.btn-small { min-height: 44px; padding: 0 18px; font-size: 15px; }
+.btn-small { min-height: 44px; padding: 0 18px; font-size: 15px; white-space: nowrap; }
 .btn .tri { width: 9px; height: 8px; background: currentColor; clip-path: polygon(0 0, 100% 50%, 0 100%); }
 
 /* ── Testata ────────────────────────────────────────── */
@@ -88,6 +88,11 @@ h1, h2, h3 { margin: 0; font-weight: 800; font-stretch: var(--wide); letter-spac
 .wordmark { font-weight: 800; font-stretch: var(--wide); font-size: 19px; letter-spacing: 0.06em; display: inline-flex; align-items: baseline; }
 .wordmark .dot { display: inline-block; width: 0.5em; height: 0.46em; margin: 0 0.16em; background: var(--accent); clip-path: polygon(50% 0, 100% 100%, 0 100%); }
 .wordmark .v { font-weight: 500; color: var(--ash); }
+.brand { flex: none; }
+.brand svg { flex: none; }
+.brand-text { display: flex; flex-direction: column; gap: 3px; line-height: 1.1; }
+.brand-tag { font-size: 12px; font-weight: 500; letter-spacing: 0.02em; color: var(--ash); white-space: nowrap; }
+.nav a { white-space: nowrap; }
 .nav { display: flex; gap: 4px; }
 .nav a { padding: 10px 12px; font-size: 15px; color: var(--ink-2); text-decoration: none; border-radius: 2px; transition: color .15s ease; }
 .nav a:hover { color: var(--ink); }
@@ -96,7 +101,7 @@ h1, h2, h3 { margin: 0; font-weight: 800; font-stretch: var(--wide); letter-spac
 .langs a, .langs span { display: inline-flex; align-items: center; min-height: 44px; padding: 0 8px; text-decoration: none; color: var(--ash); }
 .langs a:hover { color: var(--ink); }
 .langs [aria-current] { color: var(--ink); text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 7px; }
-@media (max-width: 1040px) { .nav { display: none; } }
+@media (max-width: 1180px) { .nav { display: none; } }
 @media (max-width: 560px) { .head .btn-small { display: none; } .wordmark { font-size: 16px; } }
 
 /* ── Parte alta con la foto ─────────────────────────── */

@@ -20,7 +20,10 @@ export function Header({ t, route }) {
       <div className="wrap head-in">
         <a className="brand" href={home} aria-label="Fucina.Ventures">
           <Logo />
-          <Wordmark />
+          <span className="brand-text">
+            <Wordmark />
+            <span className="brand-tag">Venture builder AI-native</span>
+          </span>
         </a>
         <nav className="nav" aria-label={t.nav.label}>
           {t.nav.links.map(([h, l]) => (
@@ -51,6 +54,7 @@ export function Footer({ t }) {
       <div className="wrap foot-in">
         <div className="foot-col">
           <span style={{ color: 'var(--ink)' }}><Wordmark /></span>
+          <span>Venture builder AI-native</span>
           <span>{t.footer.tagline}</span>
         </div>
         <div className="foot-col">
