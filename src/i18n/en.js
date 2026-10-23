@@ -81,7 +81,7 @@ export default {
       h3: 'We engineer growth, one stage at a time.',
       sub: 'The first stage is our promise: an online platform your buyer finds when searching, tries for free and pays for on their own. Once annual subscription revenue (ARR) is sustainable, the company moves into an independent vehicle. Then we build the path all the way to large customers.',
       stages: [
-        { n: '01', name: 'Product-Led Growth', tag: 'Inside Fucina', promise: 'Our promise', text: 'An online platform your buyer:', steps: ['finds when looking for a solution', 'tries for free', 'pays for on their own, by subscription'], after: 'The idea is proven with real numbers.' },
+        { n: '01', name: 'Product-Led Growth', tag: 'Inside Fucina', promise: 'Our promise', text: 'An online platform your buyer:', steps: ['finds when looking for a solution', 'tries for free', 'pays for on their own, by subscription'], after: 'The idea is proven with real invoices.' },
         { n: 'Milestone', name: 'Spin-off', tag: 'Annual revenue (ARR) · [X]', text: 'Independent vehicle: customers, code and brand move to the new company.', accent: true },
         { n: '02', later: true, name: 'Sales-Led Growth', tag: 'Independent company', text: 'A sales engine for bigger customers and larger contracts.' },
         { n: '03', later: true, name: 'Enterprise & Partner-Led', tag: 'Scale', text: 'Large enterprises and partners who take the product into their markets.' },
