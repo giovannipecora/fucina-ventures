@@ -65,7 +65,7 @@ export default {
     pathLabel: 'The path: idea, product, company',
     path: [
       { n: '01', title: 'Idea', tag: 'You bring', text: 'A problem you know from the inside, the solution, who would pay for it.' },
-      { n: '02', title: 'Product', tag: 'We build', text: 'Product, security and the Go-to-Market Validation Engine. Plus the kit to get paid: bank account, invoicing, accounts, contracts.' },
+      { n: '02', title: 'Validation', tag: 'We build', text: 'Product, security and the Go-to-Market Validation Engine. Plus the kit to get paid: bank account, invoicing, accounts, contracts.' },
       { n: '', title: 'Company', tag: 'We grow together', text: 'When annual subscription revenue (ARR) reaches [X], the company spins off into an independent legal entity: customers, code and brand move to it. We stay partners.' },
     ],
     steps: [

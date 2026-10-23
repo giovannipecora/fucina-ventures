@@ -65,7 +65,7 @@ export default {
     pathLabel: 'Il percorso: idea, prodotto, azienda',
     path: [
       { n: '01', title: 'Idea', tag: 'Tu porti', text: 'Il problema che conosci da dentro, la soluzione, chi la pagherebbe.' },
-      { n: '02', title: 'Prodotto', tag: 'Noi costruiamo', text: 'Prodotto, sicurezza e il Go-to-Market Validation Engine. E il pacchetto per incassare: conto, fatture, bilancio, contratti.' },
+      { n: '02', title: 'Validazione', tag: 'Noi costruiamo', text: 'Prodotto, sicurezza e il Go-to-Market Validation Engine. E il pacchetto per incassare: conto, fatture, bilancio, contratti.' },
       { n: '', title: 'Azienda', tag: 'Cresciamo insieme', text: 'Quando i ricavi annui degli abbonamenti (ARR) arrivano a [X], l\'azienda fa spin-off in un contenitore legale indipendente: clienti, codice e marchio passano a lei. Rimaniamo soci.' },
     ],
     steps: [

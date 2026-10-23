@@ -65,7 +65,7 @@ export default {
     pathLabel: 'El camino: idea, producto, empresa',
     path: [
       { n: '01', title: 'Idea', tag: 'Tú pones', text: 'Un problema que conoces desde dentro, la solución, quién pagaría por ella.' },
-      { n: '02', title: 'Producto', tag: 'Nosotros construimos', text: 'Producto, seguridad y el Go-to-Market Validation Engine. Y el paquete para cobrar: cuenta bancaria, facturación, contabilidad, contratos.' },
+      { n: '02', title: 'Validación', tag: 'Nosotros construimos', text: 'Producto, seguridad y el Go-to-Market Validation Engine. Y el paquete para cobrar: cuenta bancaria, facturación, contabilidad, contratos.' },
       { n: '', title: 'Empresa', tag: 'Crecemos juntos', text: 'Cuando los ingresos anuales por suscripciones (ARR) llegan a [X], la empresa hace spin-off en una entidad legal independiente: clientes, código y marca pasan a ella. Seguimos siendo socios.' },
     ],
     steps: [
