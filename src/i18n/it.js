@@ -54,6 +54,11 @@ export default {
     close: 'Se esiste, l\'azienda si costruisce intorno a lei.',
     img: 'Il buyer: una persona con il problema, che cerca una soluzione e la paga se le piace',
   },
+  band: {
+    line: 'Il ferro si batte finché è caldo.',
+    sub: 'Hai un\'idea e qualcuno pronto a pagarla? Il momento è adesso.',
+    cta: 'Proponi la tua idea',
+  },
   modello: {
     eyebrow: '02 · Il modello',
     h2: 'Non è un fondo. Non è un\'agenzia. È un socio che costruisce.',

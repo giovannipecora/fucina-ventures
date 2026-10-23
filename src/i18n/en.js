@@ -54,6 +54,11 @@ export default {
     close: 'If they exist, the company is built around them.',
     img: 'The buyer: a person with the problem, looking for a solution, who pays if they like it',
   },
+  band: {
+    line: 'Strike while the iron is hot.',
+    sub: 'Got an idea and someone ready to pay for it? Now is the time.',
+    cta: 'Pitch your idea',
+  },
   modello: {
     eyebrow: '02 · The model',
     h2: 'Not a fund. Not an agency. A partner who builds.',

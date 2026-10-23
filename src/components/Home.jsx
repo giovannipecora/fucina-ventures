@@ -41,7 +41,7 @@ function Hero({ t }) {
     <section className="hero" aria-labelledby="hero-title" ref={ref}>
       <picture className="hero-photo">
         <source srcSet="/assets/forgia.webp" type="image/webp" />
-        <img src="/assets/forgia.jpg" alt="" width="1000" height="667" fetchPriority="high" />
+        <img src="/assets/forgia.jpg" alt="" width="2000" height="1334" fetchPriority="high" />
       </picture>
       <div className="sparks" aria-hidden="true">
         {SPARKS.map(([l, d, dx], i) => (
@@ -304,8 +304,8 @@ function Proponi({ t }) {
   return (
     <section id="proponi" className="sec cta" aria-labelledby="proponi-title">
       <picture className="cta-photo" aria-hidden="true">
-        <source srcSet="/assets/forgia.webp" type="image/webp" />
-        <img src="/assets/forgia.jpg" alt="" width="1000" height="667" loading="lazy" />
+        <source srcSet="/assets/metallo-fondo.webp" type="image/webp" />
+        <img src="/assets/metallo-fondo.jpg" alt="" width="2400" height="1400" loading="lazy" />
       </picture>
       <div className="wrap split">
         <div>
@@ -359,12 +359,30 @@ function Proponi({ t }) {
   );
 }
 
+function Fascia({ t }) {
+  const b = t.band;
+  return (
+    <section className="band" aria-labelledby="band-title">
+      <picture className="band-photo" aria-hidden="true">
+        <source srcSet="/assets/metallo-fascia.webp" type="image/webp" />
+        <img src="/assets/metallo-fascia.jpg" alt="" width="2400" height="900" loading="lazy" />
+      </picture>
+      <div className="wrap band-in">
+        <h2 id="band-title">{b.line}</h2>
+        <p className="lead">{b.sub}</p>
+        <a className="btn btn-primary" href="#proponi">{b.cta}<span className="tri" aria-hidden="true" /></a>
+      </div>
+    </section>
+  );
+}
+
 export default function Home({ t }) {
   return (
     <>
       <Hero t={t} />
       <Perche t={t} />
       <BuyerSec t={t} />
+      <Fascia t={t} />
       <Modello t={t} />
       <Portfolio t={t} />
       <Team t={t} />

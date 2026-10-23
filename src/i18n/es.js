@@ -54,6 +54,11 @@ export default {
     close: 'Si existe, la empresa se construye a su alrededor.',
     img: 'El comprador: una persona con el problema, que busca una solución y la paga si le gusta',
   },
+  band: {
+    line: 'Al hierro caliente, batir de repente.',
+    sub: '¿Tienes una idea y alguien dispuesto a pagarla? El momento es ahora.',
+    cta: 'Propón tu idea',
+  },
   modello: {
     eyebrow: '02 · El modelo',
     h2: 'No es un fondo. No es una agencia. Es un socio que construye.',
