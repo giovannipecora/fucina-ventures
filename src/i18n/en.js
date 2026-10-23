@@ -80,6 +80,14 @@ export default {
       eyebrow: 'The growth path',
       h3: 'We engineer growth, one stage at a time.',
       sub: 'The first stage is our promise: an online platform your buyer finds when searching, tries for free and pays for on their own. Once annual subscription revenue (ARR) is sustainable, the company moves into an independent vehicle. Then we build the path all the way to large customers.',
+      fork: {
+        label: 'After the spin-off, two roads',
+        paths: [
+          { k: 'A', name: 'Standard company', tag: 'New investors · large rounds', text: 'The company opens its capital to new investors and raises significant funding to accelerate.' },
+          { k: 'B', name: 'Same Fucina model', tag: 'Grows on its own revenue', text: 'No new investors: it grows on its own revenue, we stay partners and keep building.' },
+        ],
+        next: 'Then, on either road:',
+      },
       stages: [
         { n: '01', name: 'Product-Led Growth', tag: 'Inside Fucina', promise: 'Our promise', text: 'An online platform your buyer:', steps: ['finds when looking for a solution', 'tries for free', 'pays for on their own, by subscription'], after: 'The idea is proven with real invoices.' },
         { n: 'Milestone', name: 'Spin-off', tag: 'Annual revenue (ARR) · [X]', text: 'Independent vehicle: customers, code and brand move to the new company.', accent: true },

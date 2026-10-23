@@ -157,7 +157,7 @@ function Modello({ t }) {
           <h3 className="h3" style={{ maxWidth: '22ch' }}>{m.growth.h3}</h3>
           <p className="lead">{m.growth.sub}</p>
           <ol className="stages" style={{ listStyle: 'none', padding: 0 }}>
-            {m.growth.stages.map((s) => (
+            {m.growth.stages.filter((s) => !s.later).map((s) => (
               <li key={s.name} className={'stage' + (s.accent ? ' on' : '') + (s.promise ? ' promise' : '') + (s.later ? ' later' : '')}>
                 {s.promise && <div className="promise-badge">{s.promise}</div>}
                 <div className="stage-n">{s.n}</div>
@@ -172,6 +172,29 @@ function Modello({ t }) {
                 {s.after && <p className="promise-after">{s.after}</p>}
               </li>
             ))}
+            <li className="fork">
+              <div className="fork-label"><span className="fork-split" aria-hidden="true" />{m.growth.fork.label}</div>
+              <div className="fork-paths">
+                {m.growth.fork.paths.map((p) => (
+                  <section key={p.k} className={'fork-path k' + p.k}>
+                    <span className="fork-k" aria-hidden="true">{p.k}</span>
+                    <div>
+                      <h4>{p.name}</h4>
+                      <div className="stage-tag">{p.tag}</div>
+                      <p>{p.text}</p>
+                    </div>
+                  </section>
+                ))}
+              </div>
+              <div className="fork-next">
+                <span className="fork-next-l">{m.growth.fork.next}</span>
+                <ol>
+                  {m.growth.stages.filter((s) => s.later).map((s) => (
+                    <li key={s.name}><span className="stage-n">{s.n}</span><b>{s.name}</b><span className="fork-next-t">{s.text}</span></li>
+                  ))}
+                </ol>
+              </div>
+            </li>
           </ol>
         </div>
 

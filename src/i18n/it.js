@@ -80,6 +80,14 @@ export default {
       eyebrow: 'Il percorso di crescita',
       h3: 'Ingegnerizziamo la crescita, un passo alla volta.',
       sub: 'Il primo passo è la nostra promessa: una piattaforma online che il tuo buyer trova quando cerca, prova gratis e paga da solo. Quando i ricavi annui degli abbonamenti (ARR) sono sostenibili, l\'azienda passa a un veicolo indipendente. Poi costruiamo il percorso fino ai grandi clienti.',
+      fork: {
+        label: 'Dopo lo spin-off, due strade',
+        paths: [
+          { k: 'A', name: 'Società standard', tag: 'Nuovi investitori · round importanti', text: 'La società apre il capitale a nuovi investitori e raccoglie investimenti alti per accelerare.' },
+          { k: 'B', name: 'Stesso modello Fucina', tag: 'Cresce con i propri ricavi', text: 'Niente nuovi investitori: cresce con i suoi ricavi, noi restiamo soci e continuiamo a costruire.' },
+        ],
+        next: 'Poi, su tutte e due le strade:',
+      },
       stages: [
         { n: '01', name: 'Product-Led Growth', tag: 'Dentro Fucina', promise: 'La nostra promessa', text: 'Una piattaforma online che il tuo buyer:', steps: ['trova quando cerca una soluzione', 'prova gratis', 'paga da solo, in abbonamento'], after: 'L\'idea si valida con le fatture vere.' },
         { n: 'Traguardo', name: 'Spin-off', tag: 'Ricavi annui (ARR) · [X]', text: 'Veicolo indipendente: clienti, codice e marchio passano alla nuova società.', accent: true },
