@@ -176,23 +176,31 @@ function Modello({ t }) {
               <div className="fork-label"><span className="fork-split" aria-hidden="true" />{m.growth.fork.label}</div>
               <div className="fork-paths">
                 {m.growth.fork.paths.map((p) => (
-                  <section key={p.k} className={'fork-path k' + p.k}>
-                    <span className="fork-k" aria-hidden="true">{p.k}</span>
-                    <div>
-                      <h4>{p.name}</h4>
-                      <div className="stage-tag">{p.tag}</div>
-                      <p>{p.text}</p>
-                    </div>
-                  </section>
+                  <div key={p.k} className={'fork-col k' + p.k}>
+                    <section className="fork-path">
+                      <span className="fork-k" aria-hidden="true">{p.k}</span>
+                      <div>
+                        <h4>{p.name}</h4>
+                        <div className="stage-tag">{p.tag}</div>
+                        <p>{p.text}</p>
+                      </div>
+                    </section>
+                    <div className="fork-arrow" aria-hidden="true" />
+                    {p.k === 'A' ? (
+                      <ol className="fork-next">
+                        {m.growth.stages.filter((s) => s.later).map((s) => (
+                          <li key={s.name}><span className="stage-n">{s.n}</span><b>{s.name}</b><span className="fork-next-t">{s.text}</span></li>
+                        ))}
+                      </ol>
+                    ) : (
+                      <div className="fork-goal">
+                        <span className="fork-goal-badge">{m.growth.fork.goal}</span>
+                        <b>{m.growth.fork.only}</b>
+                        <p>{m.growth.fork.onlyText}</p>
+                      </div>
+                    )}
+                  </div>
                 ))}
-              </div>
-              <div className="fork-next">
-                <span className="fork-next-l">{m.growth.fork.next}</span>
-                <ol>
-                  {m.growth.stages.filter((s) => s.later).map((s) => (
-                    <li key={s.name}><span className="stage-n">{s.n}</span><b>{s.name}</b><span className="fork-next-t">{s.text}</span></li>
-                  ))}
-                </ol>
               </div>
             </li>
           </ol>
