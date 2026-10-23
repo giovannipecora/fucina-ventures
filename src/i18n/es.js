@@ -74,12 +74,12 @@ export default {
     growth: {
       eyebrow: 'El camino de crecimiento',
       h3: 'Ingeniamos el crecimiento, paso a paso.',
-      sub: 'Vendemos online una suscripción que la gente prueba y paga por su cuenta. Cuando los ingresos anuales por suscripciones (ARR) son sostenibles, la empresa pasa a un vehículo independiente. Después construimos el camino hasta los grandes clientes.',
+      sub: 'El primer paso es nuestra promesa: una suscripción online que la gente prueba y paga por su cuenta. Cuando los ingresos anuales por suscripciones (ARR) son sostenibles, la empresa pasa a un vehículo independiente. Después construimos el camino hasta los grandes clientes.',
       stages: [
-        { n: '01', name: 'Product-Led Growth', tag: 'Dentro de Fucina', text: 'Una suscripción online que la gente prueba y paga por su cuenta. La idea se valida con números.' },
+        { n: '01', name: 'Product-Led Growth', tag: 'Dentro de Fucina', promise: 'Nuestra promesa', text: 'Construimos el producto y lo vendemos online como suscripción, que la gente prueba y paga por su cuenta. La idea se valida con números reales.' },
         { n: 'Hito', name: 'Spin-off', tag: 'Ingresos anuales (ARR) · [X]', text: 'Vehículo independiente: clientes, código y marca pasan a la nueva sociedad.', accent: true },
-        { n: '02', name: 'Sales-Led Growth', tag: 'Sociedad independiente', text: 'Un motor de ventas para clientes más grandes y contratos más importantes.' },
-        { n: '03', name: 'Enterprise & Partner-Led', tag: 'Escala', text: 'Grandes empresas y partners que llevan el producto a sus mercados.' },
+        { n: '02', later: true, name: 'Sales-Led Growth', tag: 'Sociedad independiente', text: 'Un motor de ventas para clientes más grandes y contratos más importantes.' },
+        { n: '03', later: true, name: 'Enterprise & Partner-Led', tag: 'Escala', text: 'Grandes empresas y partners que llevan el producto a sus mercados.' },
       ],
     },
     table: {
@@ -143,7 +143,8 @@ export default {
     lookTitle: 'Qué buscamos',
     look: [
       ['Problemas cotidianos', 'que hacen perder tiempo y dinero a personas y empresas.'],
-      ['Managers y MBA', 'que ven el problema cada día en su sector.'],
+      ['Managers', 'que ven el problema cada día en su empresa o en su sector.'],
+      ['MBA', 'que saben convertir un problema en un modelo de negocio.'],
       ['Software en el centro', 'web, apps, IA: donde construir bien es la ventaja.'],
       ['Privacidad desde el principio', 'productos que respetan a las personas y sus datos.'],
     ],

@@ -121,7 +121,8 @@ function Modello({ t }) {
           <p className="lead">{m.growth.sub}</p>
           <ol className="stages" style={{ listStyle: 'none', padding: 0 }}>
             {m.growth.stages.map((s) => (
-              <li key={s.name} className={'stage' + (s.accent ? ' on' : '')}>
+              <li key={s.name} className={'stage' + (s.accent ? ' on' : '') + (s.promise ? ' promise' : '') + (s.later ? ' later' : '')}>
+                {s.promise && <div className="promise-badge">{s.promise}</div>}
                 <div className="stage-n">{s.n}</div>
                 <h4>{s.name}</h4>
                 <div className="stage-tag">{s.tag}</div>

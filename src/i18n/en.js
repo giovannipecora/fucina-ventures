@@ -74,12 +74,12 @@ export default {
     growth: {
       eyebrow: 'The growth path',
       h3: 'We engineer growth, one stage at a time.',
-      sub: 'We sell an online subscription that people try and pay for on their own. Once annual subscription revenue (ARR) is sustainable, the company moves into an independent vehicle. Then we build the path all the way to large customers.',
+      sub: 'The first stage is our promise: an online subscription that people try and pay for on their own. Once annual subscription revenue (ARR) is sustainable, the company moves into an independent vehicle. Then we build the path all the way to large customers.',
       stages: [
-        { n: '01', name: 'Product-Led Growth', tag: 'Inside Fucina', text: 'An online subscription people try and pay for on their own. The idea is proven with numbers.' },
+        { n: '01', name: 'Product-Led Growth', tag: 'Inside Fucina', promise: 'Our promise', text: 'We build the product and sell it online as a subscription that people try and pay for on their own. The idea is proven with real numbers.' },
         { n: 'Milestone', name: 'Spin-off', tag: 'Annual revenue (ARR) · [X]', text: 'Independent vehicle: customers, code and brand move to the new company.', accent: true },
-        { n: '02', name: 'Sales-Led Growth', tag: 'Independent company', text: 'A sales engine for bigger customers and larger contracts.' },
-        { n: '03', name: 'Enterprise & Partner-Led', tag: 'Scale', text: 'Large enterprises and partners who take the product into their markets.' },
+        { n: '02', later: true, name: 'Sales-Led Growth', tag: 'Independent company', text: 'A sales engine for bigger customers and larger contracts.' },
+        { n: '03', later: true, name: 'Enterprise & Partner-Led', tag: 'Scale', text: 'Large enterprises and partners who take the product into their markets.' },
       ],
     },
     table: {
@@ -143,7 +143,8 @@ export default {
     lookTitle: 'What we look for',
     look: [
       ['Everyday problems', 'that cost people and businesses time and money.'],
-      ['Managers and MBAs', 'who see the problem every day in their industry.'],
+      ['Managers', 'who see the problem every day in their company or industry.'],
+      ['MBAs', 'who know how to turn a problem into a business model.'],
       ['Software at the core', 'web, apps, AI: where building well is the advantage.'],
       ['Privacy from the start', 'products that respect people and their data.'],
     ],

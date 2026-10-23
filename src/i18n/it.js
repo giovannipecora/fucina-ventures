@@ -74,12 +74,12 @@ export default {
     growth: {
       eyebrow: 'Il percorso di crescita',
       h3: 'Ingegnerizziamo la crescita, un passo alla volta.',
-      sub: 'Vendiamo online un abbonamento che le persone provano e pagano da sole. Quando i ricavi annui degli abbonamenti (ARR) sono sostenibili, l\'azienda passa a un veicolo indipendente. Poi costruiamo il percorso fino ai grandi clienti.',
+      sub: 'Il primo passo è la nostra promessa: un abbonamento online che le persone provano e pagano da sole. Quando i ricavi annui degli abbonamenti (ARR) sono sostenibili, l\'azienda passa a un veicolo indipendente. Poi costruiamo il percorso fino ai grandi clienti.',
       stages: [
-        { n: '01', name: 'Product-Led Growth', tag: 'Dentro Fucina', text: 'Un abbonamento online che le persone provano e pagano da sole. L\'idea si valida con i numeri.' },
+        { n: '01', name: 'Product-Led Growth', tag: 'Dentro Fucina', promise: 'La nostra promessa', text: 'Costruiamo il prodotto e lo vendiamo online come abbonamento, che le persone provano e pagano da sole. L\'idea si valida con i numeri veri.' },
         { n: 'Traguardo', name: 'Spin-off', tag: 'Ricavi annui (ARR) · [X]', text: 'Veicolo indipendente: clienti, codice e marchio passano alla nuova società.', accent: true },
-        { n: '02', name: 'Sales-Led Growth', tag: 'Società indipendente', text: 'Un motore di vendita per clienti più grandi e contratti più ricchi.' },
-        { n: '03', name: 'Enterprise & Partner-Led', tag: 'Scala', text: 'Grandi aziende e partner che portano il prodotto sui loro mercati.' },
+        { n: '02', later: true, name: 'Sales-Led Growth', tag: 'Società indipendente', text: 'Un motore di vendita per clienti più grandi e contratti più ricchi.' },
+        { n: '03', later: true, name: 'Enterprise & Partner-Led', tag: 'Scala', text: 'Grandi aziende e partner che portano il prodotto sui loro mercati.' },
       ],
     },
     table: {
@@ -143,7 +143,8 @@ export default {
     lookTitle: 'Cosa cerchiamo',
     look: [
       ['Problemi di tutti i giorni', 'che fanno perdere tempo e soldi a persone e aziende.'],
-      ['Manager e MBA', 'che il problema lo vedono ogni giorno nel loro settore.'],
+      ['Manager', 'che il problema lo vedono ogni giorno nella loro azienda o nel loro settore.'],
+      ['MBA', 'che sanno trasformare un problema in un modello di business.'],
       ['Software al centro', 'web, app, AI: dove costruire bene è il vantaggio.'],
       ['Privacy fin dall\'inizio', 'prodotti che rispettano le persone e i loro dati.'],
     ],
