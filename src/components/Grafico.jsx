@@ -100,7 +100,7 @@ function Svg({ W, H, pad, t, fs, id, speed, month }) {
 }
 
 export default function GraficoArr({ t }) {
-  const [month, setMonth] = useState(MESI);
+  const [month, setMonth] = useState(VELOCITA.media);
   const [speed, setSpeed] = useState('media');
   const [playing, setPlaying] = useState(false);
   const raf = useRef(0);
@@ -114,13 +114,13 @@ export default function GraficoArr({ t }) {
   const play = () => {
     cancelAnimationFrame(raf.current);
     const reduce = typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (reduce) { setMonth(MESI); return; }
+    if (reduce) { setMonth(mT); return; }
     const start = performance.now();
     const dur = 5200;
     setPlaying(true);
     const step = (now) => {
       const p = Math.min(1, (now - start) / dur);
-      setMonth(Math.round(p * MESI * 10) / 10);
+      setMonth(Math.round(p * mT * 10) / 10);
       if (p < 1) raf.current = requestAnimationFrame(step);
       else setPlaying(false);
     };
@@ -134,7 +134,7 @@ export default function GraficoArr({ t }) {
         <div className="arr-speed" role="radiogroup" aria-label={t.speedLabel}>
           <span className="arr-ctl-label">{t.speedLabel}</span>
           {Object.keys(VELOCITA).map((s, i) => (
-            <button key={s} type="button" role="radio" aria-checked={speed === s} className={'arr-chip' + (speed === s ? ' on' : '')} onClick={() => setSpeed(s)}>
+            <button key={s} type="button" role="radio" aria-checked={speed === s} className={'arr-chip' + (speed === s ? ' on' : '')} onClick={() => { cancelAnimationFrame(raf.current); setPlaying(false); setSpeed(s); setMonth(VELOCITA[s]); }}>
               {t.speeds[i]}
             </button>
           ))}
@@ -154,7 +154,7 @@ export default function GraficoArr({ t }) {
         <Svg W={520} H={580} pad={{ l: 44, r: 16, t: 70, b: 50 }} t={t} fs={20} id="tall" speed={speed} month={month} />
         <label className="arr-time">
           <span className="arr-ctl-label">{t.timeLabel}</span>
-          <input type="range" min="0" max={MESI} step="1" value={shownMonth} onChange={(e) => { cancelAnimationFrame(raf.current); setPlaying(false); setMonth(Number(e.target.value)); }} aria-valuetext={fmt(t.monthLabel, shownMonth)} />
+          <input type="range" min="0" max={MESI} step="1" value={shownMonth} onChange={(e) => { cancelAnimationFrame(raf.current); setPlaying(false); setMonth(Math.min(Number(e.target.value), mT)); }} aria-valuetext={fmt(t.monthLabel, shownMonth)} />
         </label>
       </div>
       <figcaption className="arr-note">{t.note}</figcaption>
