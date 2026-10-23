@@ -86,7 +86,7 @@ export default {
           { k: 'A', name: 'Standard company', tag: 'New investors · large rounds', text: 'The company opens its capital to new investors and raises significant funding to accelerate.' },
           { k: 'B', name: 'Pure Product-Led Growth', tag: 'Same Fucina model · grows on its own revenue', text: 'Like A, an independent company. But with no new investors: it stays pure Product-Led Growth, grows on its own revenue and we stay partners.' },
         ],
-        goal: 'Our goal', only: 'Product-Led Growth only', onlyText: 'No sales team: the buyer finds it, tries it and pays alone. Always.',
+        goal: 'Ideal case', only: 'Product-Led Growth only', onlyText: 'No sales team: the buyer finds it, tries it and pays alone. Always.',
       },
       stages: [
         { n: '01', name: 'Product-Led Growth', tag: 'Inside Fucina', promise: 'Our promise', text: 'An online platform your buyer:', steps: ['finds when looking for a solution', 'tries for free', 'pays for on their own, by subscription'], after: 'The idea is proven with real invoices.' },
