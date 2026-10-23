@@ -20,7 +20,7 @@ export default {
   hero: {
     eyebrow: 'Per manager, studenti e diplomati MBA, e per chi ha trovato un problema e qualcuno disposto a pagare per risolverlo',
     h1a: 'Non ti diamo soldi.',
-    h1b: 'Ti diamo un\'azienda: sicura, scalabile, protetta, che può vendere per validare che il tuo buyer esiste.',
+    h1b: 'Ti costruiamo un Go-to-Market Engine: sicuro, scalabile, protetto, che può vendere per validare che il tuo buyer esiste.',
     sub: 'Con l\'AI, per far crescere un\'azienda non servono più milioni: serve chi sa costruire. Tu porti l\'idea, noi la costruiamo e ti diamo tutto per incassare dal primo giorno. In cambio diventiamo soci.',
     cta1: 'Proponi la tua idea',
     cta2: 'Guarda il portfolio',
