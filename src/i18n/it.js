@@ -86,7 +86,7 @@ export default {
           { k: 'A', name: 'Società standard', tag: 'Nuovi investitori · round importanti', text: 'La società apre il capitale a nuovi investitori e raccoglie investimenti alti per accelerare.' },
           { k: 'B', name: 'Pure Product-Led Growth', tag: 'Stesso modello Fucina · cresce con i propri ricavi', text: 'Come A, una società indipendente. Ma senza nuovi investitori: resta Product-Led Growth puro, cresce con i suoi ricavi e noi restiamo soci.' },
         ],
-        goal: 'Caso ideale', only: 'Solo Product-Led Growth', onlyText: 'Senza team di vendita: il buyer trova, prova e paga da solo. Sempre.',
+        goal: 'Caso ideale', only: 'Solo Product-Led Growth', onlyText: 'È il prodotto che si vende da solo: il buyer lo trova, lo prova e lo sceglie. Senza un pesante team di vendita.',
       },
       stages: [
         { n: '01', name: 'Product-Led Growth', tag: 'Dentro Fucina', promise: 'La nostra promessa', text: 'Una piattaforma online che il tuo buyer:', steps: ['trova quando cerca una soluzione', 'prova gratis', 'paga da solo, in abbonamento'], after: 'L\'idea si valida con le fatture vere.' },
