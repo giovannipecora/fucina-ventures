@@ -202,7 +202,7 @@ h1, h2, h3 { margin: 0; font-weight: 800; font-stretch: var(--wide); letter-spac
 .criteria li:last-child { border-bottom: 1px solid var(--line); }
 .criteria li::before { counter-increment: c; content: counter(c, decimal-leading-zero); font-weight: 700; color: var(--ash); font-variant-numeric: tabular-nums; }
 .criteria li.key::before { color: var(--accent); }
-.criteria li.key { font-weight: 600; }
+.criteria li.key { font-weight: 600; color: var(--accent); }
 .buyer .close { margin-top: 28px; font-size: 22px; font-weight: 700; font-stretch: 112%; }
 
 /* Modello: idea → prodotto → azienda */
