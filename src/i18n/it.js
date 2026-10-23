@@ -56,7 +56,7 @@ export default {
   },
   band: {
     line: 'Il ferro si batte finché è caldo.',
-    sub: 'Hai un\'idea e qualcuno pronto a pagarla? Il momento è adesso.',
+    sub: 'Hai identificato problema, soluzione e buyer? Il momento è adesso.',
     cta: 'Proponi la tua idea',
   },
   modello: {

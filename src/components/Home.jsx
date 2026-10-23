@@ -175,27 +175,28 @@ function Modello({ t }) {
         </div>
 
         <div className="compare">
-          <table>
-            <caption>{m.table.caption}</caption>
-            <thead>
-              <tr>
-                <td />
-                {m.table.cols.map((c, i) => (
-                  <th key={c} scope="col" className={i === 2 ? 'us' : undefined}>{c}</th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {m.table.rows.map(([label, a, b, c]) => (
-                <tr key={label}>
-                  <th scope="row">{label}</th>
-                  <td>{a}</td>
-                  <td>{b}</td>
-                  <td className="us">{c}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+          <h3 className="h3">{m.table.caption}</h3>
+          <div className="compare-cols">
+            {m.table.cols.map((c, ci) => (
+              <section key={c} className={'col' + (ci === 2 ? ' us' : '')} aria-label={c}>
+                <h4 className="col-name">
+                  {ci === 2 && <span className="col-mark" aria-hidden="true" />}
+                  {c}
+                </h4>
+                <dl>
+                  {m.table.rows.map((r) => (
+                    <div key={r[0]} className="col-row">
+                      <dt>{r[0]}</dt>
+                      <dd>
+                        <span className={'col-ico ' + (ci === 2 ? 'yes' : 'no')} aria-hidden="true" />
+                        {r[ci + 1]}
+                      </dd>
+                    </div>
+                  ))}
+                </dl>
+              </section>
+            ))}
+          </div>
         </div>
         <p className="pacts"><strong>{m.pacts[0]}</strong> {m.pacts[1]}</p>
       </div>

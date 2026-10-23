@@ -51,10 +51,12 @@ export function Footer({ t }) {
   const home = homeOf[t.lang];
   return (
     <footer className="foot">
+      <div className="wrap foot-sign" aria-hidden="true">
+        <span>FUCINA</span><span className="dot" /><span className="v">VENTURES</span>
+      </div>
       <div className="wrap foot-in">
         <div className="foot-col">
-          <span style={{ color: 'var(--ink)' }}><Wordmark /></span>
-          <span>Venture builder AI-native</span>
+          <span style={{ color: 'var(--ink)' }}>Venture builder AI-native</span>
           <span>{t.footer.tagline}</span>
         </div>
         <div className="foot-col">

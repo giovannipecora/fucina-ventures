@@ -56,7 +56,7 @@ export default {
   },
   band: {
     line: 'Strike while the iron is hot.',
-    sub: 'Got an idea and someone ready to pay for it? Now is the time.',
+    sub: 'Identified the problem, the solution and the buyer? Now is the time.',
     cta: 'Pitch your idea',
   },
   modello: {

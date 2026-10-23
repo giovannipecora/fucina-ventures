@@ -56,7 +56,7 @@ export default {
   },
   band: {
     line: 'Al hierro caliente, batir de repente.',
-    sub: '¿Tienes una idea y alguien dispuesto a pagarla? El momento es ahora.',
+    sub: '¿Has identificado el problema, la solución y el comprador? El momento es ahora.',
     cta: 'Propón tu idea',
   },
   modello: {
