@@ -84,9 +84,9 @@ export default {
         label: 'After the spin-off, two roads',
         paths: [
           { k: 'A', name: 'Standard company', tag: 'New investors · large rounds', text: 'The company opens its capital to new investors and raises significant funding to accelerate.' },
-          { k: 'B', name: 'Same Fucina model', tag: 'Grows on its own revenue', text: 'No new investors: it grows on its own revenue, we stay partners and keep building.' },
+          { k: 'B', name: 'Pure Product-Led Growth', tag: 'Same Fucina model · grows on its own revenue', text: 'Like A, an independent company. But with no new investors: it stays pure Product-Led Growth, grows on its own revenue and we stay partners.' },
         ],
-        next: 'Then, on either road:',
+        next: 'Then, on road A:',
       },
       stages: [
         { n: '01', name: 'Product-Led Growth', tag: 'Inside Fucina', promise: 'Our promise', text: 'An online platform your buyer:', steps: ['finds when looking for a solution', 'tries for free', 'pays for on their own, by subscription'], after: 'The idea is proven with real invoices.' },

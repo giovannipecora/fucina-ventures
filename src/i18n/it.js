@@ -84,9 +84,9 @@ export default {
         label: 'Dopo lo spin-off, due strade',
         paths: [
           { k: 'A', name: 'Società standard', tag: 'Nuovi investitori · round importanti', text: 'La società apre il capitale a nuovi investitori e raccoglie investimenti alti per accelerare.' },
-          { k: 'B', name: 'Stesso modello Fucina', tag: 'Cresce con i propri ricavi', text: 'Niente nuovi investitori: cresce con i suoi ricavi, noi restiamo soci e continuiamo a costruire.' },
+          { k: 'B', name: 'Pure Product-Led Growth', tag: 'Stesso modello Fucina · cresce con i propri ricavi', text: 'Come A, una società indipendente. Ma senza nuovi investitori: resta Product-Led Growth puro, cresce con i suoi ricavi e noi restiamo soci.' },
         ],
-        next: 'Poi, su tutte e due le strade:',
+        next: 'Poi, sulla strada A:',
       },
       stages: [
         { n: '01', name: 'Product-Led Growth', tag: 'Dentro Fucina', promise: 'La nostra promessa', text: 'Una piattaforma online che il tuo buyer:', steps: ['trova quando cerca una soluzione', 'prova gratis', 'paga da solo, in abbonamento'], after: 'L\'idea si valida con le fatture vere.' },
