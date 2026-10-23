@@ -4,7 +4,7 @@ export default {
   meta: {
     home: {
       title: 'Fucina.Ventures · AI-native venture builder: a company instead of money',
-      description: 'We don\'t give you money: we build your company. A secure, scalable product, legal entity and contracts, a sales engine. €1,000 from you and €1,000 from us for up to 3 years of incubation, in exchange for equity.',
+      description: 'We don\'t give you money: we build your company. A secure, scalable product, legal entity and contracts, a sales engine. €1,000 from you and €1,000 from us for up to 2 years of incubation, in exchange for equity.',
     },
     privacy: { title: 'Privacy policy · Fucina.Ventures', description: 'How Fucina.Ventures handles the data sent through the «Enter Fucina» form.' },
     thanks: { title: 'Thank you · Fucina.Ventures', description: 'We have received your idea.' },
@@ -26,7 +26,7 @@ export default {
     cta2: 'See the portfolio',
   },
   strip: [
-    ['1K + 1K', '€1,000 from you, €1,000 from us: up to 3 years of incubation'],
+    ['1K + 1K', '€1,000 from you, €1,000 from us: up to 2 years of incubation'],
     ['Idea + work', 'you bring the idea, we bring the work and the legal entity'],
     ['AI-native', 'small team, big product'],
     ['Equity', 'our only currency'],
@@ -115,17 +115,17 @@ export default {
     aria: 'Illustrative chart: annual revenue grows exponentially, first below the fixed costs and then above them, up to the spin-off milestone.',
     costs: 'Fixed costs',
     target: 'ARR milestone [X] · spin-off',
-    xAxis: 'Time · up to 3 years',
+    xAxis: 'Time · up to 2 years',
     day1: 'Day 1',
     yAxis: 'Annual revenue (ARR)',
     note: 'Illustrative trend, not a forecast.',
-    ticks: ['Day 1', 'Year 1', 'Year 2', 'Year 3'],
+    ticks: ['Day 1', '6 months', 'Year 1', '18 months', 'Year 2'],
     timeLabel: 'Move through time',
     monthLabel: 'Month {n}',
     spinoffAt: 'Spin-off at month {n}',
     speedLabel: 'Growth pace',
     speeds: ['Slow', 'Steady', 'Fast'],
-    play: 'Play the 3 years',
+    play: 'Play the growth',
     zones: [
       ['No risk', 'Until revenue covers the fixed costs, we cover the gap: you pay nothing extra.'],
       ['Investment', 'Once revenue exceeds costs, everything left over goes back into the company to grow its visibility.'],
@@ -163,7 +163,7 @@ export default {
     h2: 'What people ask us.',
     items: [
       ['How much equity do you ask for?', 'It depends on how much there is to build. We propose it after the call, in writing. [To be defined: the general rule]'],
-      ['How much do I pay?', 'You put in €1,000 and we put in another €1,000, for up to 3 years of incubation. Development, bank account, invoicing and accounts are our investment while the company is inside Fucina. [To be confirmed: spin-off costs]'],
+      ['How much do I pay?', 'You put in €1,000 and we put in another €1,000, for up to 2 years of incubation. Development, bank account, invoicing and accounts are our investment while the company is inside Fucina. [To be confirmed: spin-off costs]'],
       ['When does it become my company?', 'When annual subscription revenue (ARR) reaches [X]. The threshold and the equity split are in the agreement from day one.'],
       ['Is my idea safe?', 'We sign a confidentiality agreement before getting into the details. [To be confirmed]'],
       ['What if it doesn\'t click?', 'It doesn\'t mean your idea is bad. It just means it doesn\'t fit the templates we know how to build well today. We\'ll always tell you, clearly.'],

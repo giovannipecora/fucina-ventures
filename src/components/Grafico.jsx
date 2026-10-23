@@ -1,15 +1,15 @@
-// Grafico interattivo e illustrativo dei ricavi annui (ARR), dal giorno 1 a 3 anni.
+// Grafico interattivo e illustrativo dei ricavi annui (ARR), dal giorno 1 a 2 anni.
 // Tre zone: ① nessun rischio, ② investimento, ③ spin-off al traguardo.
 // Il cursore muove il tempo; la velocità cambia quanto la curva resta piatta.
 // Nessun numero reale: solo la forma del percorso.
 import { useEffect, useRef, useState } from 'react';
 import { X as soglia } from './Soglia.jsx';
 
-const MESI = 36;
+const MESI = 24;
 const COSTI = 0.22; // linea dei costi fissi (quota dell'asse)
 const TARGET = 0.82; // traguardo ARR
 const PIATTEZZA = 4.4; // più alto = curva più piatta all'inizio
-const VELOCITA = { lenta: 34, media: 26, veloce: 18 }; // mese dello spin-off
+const VELOCITA = { lenta: 22, media: 16, veloce: 11 }; // mese dello spin-off
 
 function modello(speed) {
   const mT = VELOCITA[speed];
@@ -51,8 +51,8 @@ function Svg({ W, H, pad, t, fs, id, speed, month }) {
           <line x1="0" y1="0" x2="0" y2="10" stroke="var(--line-2)" strokeWidth="3" />
         </pattern>
         <linearGradient id={`fade-${id}`} x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stopColor="var(--accent)" stopOpacity="0.6" />
-          <stop offset="1" stopColor="var(--accent)" stopOpacity="0.12" />
+          <stop offset="0" stopColor="var(--accent)" stopOpacity="0.95" />
+          <stop offset="1" stopColor="var(--accent)" stopOpacity="0.7" />
         </linearGradient>
       </defs>
 
@@ -62,7 +62,7 @@ function Svg({ W, H, pad, t, fs, id, speed, month }) {
       {deficit && <path d={deficit} fill={`url(#hatch-${id})`} />}
       {surplus && <path d={surplus} fill={`url(#fade-${id})`} />}
 
-      {[12, 24].map((m) => (
+      {[6, 12, 18].map((m) => (
         <line key={m} x1={X(m)} y1={y0} x2={X(m)} y2={y0 + 6} stroke="var(--line-2)" />
       ))}
       <line x1={x0} y1={y0} x2={x1} y2={y0} stroke="var(--line-2)" strokeWidth="1.5" />
@@ -92,7 +92,7 @@ function Svg({ W, H, pad, t, fs, id, speed, month }) {
       {mark(xt, '3', zone === 2)}
 
       {t.ticks.map((lab, i) => (
-        <text key={lab} x={X(i * 12)} y={y0 + fs * 1.5} textAnchor={i === 0 ? 'start' : i === 3 ? 'end' : 'middle'} fontSize={fs * 0.75} fill="var(--ash)">{lab}</text>
+        <text key={lab} x={X((i * MESI) / (t.ticks.length - 1))} y={y0 + fs * 1.5} textAnchor={i === 0 ? 'start' : i === t.ticks.length - 1 ? 'end' : 'middle'} fontSize={fs * 0.75} fill="var(--ash)">{lab}</text>
       ))}
       <text transform={`translate(${x0 - fs * 0.9} ${y0}) rotate(-90)`} fontSize={fs * 0.75} fill="var(--ash)">{t.yAxis}</text>
     </svg>
