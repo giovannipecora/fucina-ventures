@@ -79,8 +79,8 @@ function Svg({ W, H, pad, t, fs, id, speed, month }) {
       <text x={x1} y={id === 'tall' ? yc + fs * 1.5 : yc - fs * 0.9} textAnchor="end" fontSize={fs * 0.8} fontWeight="600" fill="var(--ink-2)">{id === 'tall' ? t.costs.split(' · ')[0] : t.costs}</text>
       <line x1={x0} y1={yt} x2={x1} y2={yt} stroke="var(--accent)" strokeWidth="1.5" strokeDasharray="2 6" />
       <g transform={`translate(${x0 + 10} ${yt - fs * 1.45})`} aria-hidden="true">
-        <circle cx={fs / 2} cy={fs / 2} r={fs / 2 - 0.75} fill="none" stroke="var(--ink)" strokeWidth="1.5" />
-        <circle cx={fs / 2} cy={fs / 2} r={fs * 0.24} fill="var(--accent)" />
+        <path d={`M${fs * 0.5} ${fs * 0.07} L${fs * 0.94} ${fs * 0.9} L${fs * 0.06} ${fs * 0.9} Z`} fill="none" stroke="var(--ink)" strokeWidth="1.5" />
+        <circle cx={fs / 2} cy={fs * 0.62} r={fs * 0.16} fill="var(--accent)" />
       </g>
       <text x={x0 + 10 + fs * 1.4} y={yt - fs * 0.6} fontSize={fs * 0.8} fontWeight="700" fill="var(--accent)">{t.target.replace(' [X]', '').replace('[X]', '')}</text>
 

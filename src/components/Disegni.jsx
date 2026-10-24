@@ -24,8 +24,8 @@ export function Logo({ size = 30, dark = false }) {
   const line = dark ? 'var(--bg)' : 'var(--ink)';
   return (
     <svg width={size} height={size} viewBox="0 0 30 30" aria-hidden="true">
-      <circle cx="15" cy="15" r="13.5" fill="none" stroke={line} strokeWidth="2" />
-      <Ferro cx={15} cy={15} r={6.4} solid={dark ? 'var(--bg)' : null} />
+      <path d="M15 2.2 L28 26.5 L2 26.5 Z" fill="none" stroke={line} strokeWidth="2" />
+      <Ferro cx={15} cy={18.6} r={4.6} solid={dark ? 'var(--bg)' : null} />
     </svg>
   );
 }
