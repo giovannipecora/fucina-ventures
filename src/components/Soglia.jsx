@@ -1,4 +1,4 @@
-// Al posto di «[X]» (la soglia di ARR ancora da decidere) mostra il triangolo del logo.
+// Al posto di «[X]» (la soglia di ARR ancora da decidere) mostra il logo: cerchio con il tondo.
 export function X(testo) {
   if (typeof testo !== 'string' || !testo.includes('[X]')) return testo;
   const parti = testo.split('[X]');

@@ -249,8 +249,8 @@ function FragmentStep({ s, last }) {
       <div role="listitem" className={'path-step' + (last ? ' final' : '')}>
         {last ? (
           <svg width="44" height="44" viewBox="0 0 30 30" aria-hidden="true">
-            <rect x="1" y="1" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="2" />
-            <path d="M8 21 L15 9 L22 21 Z" fill="currentColor" />
+            <circle cx="15" cy="15" r="13.5" fill="none" stroke="currentColor" strokeWidth="2" />
+            <circle cx="15" cy="15" r="6.4" fill="currentColor" />
           </svg>
         ) : (
           <div className="path-n num">{s.n}</div>

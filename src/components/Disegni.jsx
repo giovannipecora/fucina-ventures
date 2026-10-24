@@ -1,12 +1,31 @@
+import { useId } from 'react';
 // Disegni del sito: logo, ruoli del team, buyer, modulo di esempio.
 // Linee sottili grigie e un solo dettaglio nel colore principale (var(--accent)).
+
+// Il tondo del logo: ferro incandescente (dal giallo caldo all'arancione).
+export function Ferro({ cx, cy, r, solid = null }) {
+  const id = 'ferro' + useId().replace(/[^a-zA-Z0-9]/g, '');
+  if (solid) return <circle cx={cx} cy={cy} r={r} fill={solid} stroke="none" />;
+  return (
+    <>
+      <defs>
+        <radialGradient id={id} cx="0.42" cy="0.38" r="0.62">
+          <stop offset="0" stopColor="#ffc46b" />
+          <stop offset="0.55" stopColor="#f2692a" />
+          <stop offset="1" stopColor="#c2410c" />
+        </radialGradient>
+      </defs>
+      <circle cx={cx} cy={cy} r={r} fill={`url(#${id})`} stroke="none" />
+    </>
+  );
+}
 
 export function Logo({ size = 30, dark = false }) {
   const line = dark ? 'var(--bg)' : 'var(--ink)';
   return (
     <svg width={size} height={size} viewBox="0 0 30 30" aria-hidden="true">
-      <rect x="1" y="1" width="28" height="28" fill="none" stroke={line} strokeWidth="2" />
-      <path d="M8 21 L15 9 L22 21 Z" fill={dark ? 'var(--bg)' : 'var(--accent)'} />
+      <circle cx="15" cy="15" r="13.5" fill="none" stroke={line} strokeWidth="2" />
+      <Ferro cx={15} cy={15} r={6.4} solid={dark ? 'var(--bg)' : null} />
     </svg>
   );
 }
@@ -65,7 +84,7 @@ const ruoli = {
       <circle cx="100" cy="30" r="4" fill="#6B7178" stroke="none" />
       <circle cx="130" cy="36" r="4" fill="#6B7178" stroke="none" />
       <path d="M100 190v24M100 214l-10-10M100 214l10-10" stroke="#9AA0A6" strokeWidth="3" />
-      <circle cx="100" cy="232" r="7" fill="var(--accent)" stroke="none" />
+      <Ferro cx={100} cy={232} r={9} />
     </>
   ),
 };
